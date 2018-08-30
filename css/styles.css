@@ -6412,16 +6412,7 @@ a.text-dark:hover, a.text-dark:focus {
   .owl-smd {
     margin-left: -10px; }
   .tenje-brand {
-    border: 2px solid #b1bbbb;
-    padding: 12px;
-    margin: 5px; }
-  .brand-txt {
-    width: 70px;
-    height: 20px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block; }
+    border: 2px solid #b1bbbb; }
   .br-hua {
     height: 120px;
     margin-left: 3px;
@@ -6434,17 +6425,11 @@ a.text-dark:hover, a.text-dark:focus {
     display: block; }
   .br-sam {
     height: 120px;
-    margin-left: 9px;
-    margin-right: 9px;
+    margin-left: 3px;
+    margin-right: 3px;
     display: block; } }
 
 @media (min-width: 450px) {
-  .brand-txt {
-    width: 70px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block; }
   .br-hua {
     height: 160px;
     margin-left: 6px;

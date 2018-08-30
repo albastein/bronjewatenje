@@ -20,10 +20,6 @@ jQuery(document).ready(function() {
 
     $('form fieldset:first').fadeIn('slow');
 
-    $('form input[type="text"], form input[type="password"], form textarea').on('focus', function() {
-        $(this).removeClass('input-error');
-    });
-
     $('form .btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var next_step = true;
