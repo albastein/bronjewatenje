@@ -154,6 +154,9 @@ $theme-colors: ( "primary": #07454C);
 }
 
 @media (max-width: 450px) {
+    .mbf label {
+        font-size: 14px;
+    }
     .owl-nav {
         width: 100%;
         margin-left: auto;

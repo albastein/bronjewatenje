@@ -26,6 +26,9 @@ jQuery(document).ready(function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
+        // Validation
+
+        /*
         parent_fieldset.find('input[type="text"], input[type="password"], input[type="username"], input[type="email"], input[type="tel"], input[type="url"], textarea').each(function() {
             if ($(this).val() == "") {
                 $(this).addClass('input-error');
@@ -35,14 +38,21 @@ jQuery(document).ready(function() {
             }
         });
 
-        parent_fieldset.find('input[type="checkbox"]').each(function() {
+        */
+
+        // Brand selector validation
+
+        /*
+        parent_fieldset.find('input[type="radio"]').each(function() {
             if ($(this).prop("checked") == false) {
-                $('.form-check-label').css("color", "red");
+                alert('Please answer all questions');
                 next_step = false;
             } else {
                 $('.form-check-label').css("color", "black");
             }
         });
+
+        */
 
         if (next_step) {
             parent_fieldset.fadeOut(400, function() {
@@ -80,3 +90,23 @@ jQuery(document).ready(function() {
     });
 
 });
+
+// Validation 
+
+/* 
+function validateRadio(radios) {
+    for (i = 0; i < radios.length; ++i) {
+        if (radios[i].checked) return true;
+    }
+    return false;
+}
+
+function validateForm() {
+    if (validateRadio(document.forms["sell-wiz"]["brand"])) {
+        return true;
+    } else {
+        alert('Please answer all questions');
+        return false;
+    }
+}
+*/

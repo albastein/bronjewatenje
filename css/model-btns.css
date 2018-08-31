@@ -1,0 +1,56 @@
+.h-m {
+    list-style-type: none;
+    margin: 25px 0;
+    padding: 0;
+}
+
+.h-m li {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 200px;
+    height: 40px;
+    position: relative;
+}
+
+.mbf {
+    margin-bottom: 20px !important;
+}
+
+.mbf label,
+.mbf input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mbf input[type="radio"] {
+    display: none;
+}
+
+.mbf .fa {
+    position: absolute;
+    color: #fff;
+    background-color: #07454C;
+    padding: 3px;
+    top: 0;
+    right: 0;
+}
+
+.mbf-checked .fa {
+    overflow: hidden;
+    display: block !important;
+}
+
+.mbf-checked label {
+    border: 2px solid #07454C !important;
+}
+
+.mbf label {
+    padding: 12px 0 37px 0;
+    border: 2px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+}

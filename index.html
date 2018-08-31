@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <div class="navbar-header">
-                <a class="pull-left" href="#"><img src="/images/strenje.png"></a>
+                <a class="pull-left" href="index.html"><img src="/images/strenje.png"></a>
             </div>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -77,8 +77,12 @@
             <img style="max-width: 100%; position:relative;" src="/images/banner-bg.png">
             <h3 style="color: #07454C; padding-right: 20px; top:10%; width: 100%; text-align: center; position: absolute;">Buy or sell used phones</h3>
             <p class="lead" style="position: absolute; text-align: center; top:20%; width: 100%; color: #07454C;">Spend less for quality</p>
-            <button type="button" class="btn btn-outline-light" style="bottom: 5%; left: 15px; position: absolute;">Sell</button>
-            <button type="button" class="btn btn-outline-light" style="bottom: 5%; left: 80px; position: absolute;">Buy</button>
+            <form action="#sell-a-phone">
+                <button type="submit" value="Sell" class="btn btn-outline-light" style="bottom: 5%; left: 15px; position: absolute;">Sell</button>
+            </form>
+            <form action="#buy-a-phone">
+                <button type="submit" value="buy" class="btn btn-outline-light" style="bottom: 5%; left: 80px; position: absolute;">Buy</button>
+            </form>
         </div>
         <div style="text-align:center; background: linear-gradient( #07454C, rgb(255, 255, 255));" class="banner-sm">
             <h3 style="color:#fff">Buy and Sell used phones</h3>
@@ -86,8 +90,8 @@
 
             <img src="/images/three-phones.png" class="img-fluid shadowed" alt="Responsive image">
             <div class="row justify-content-center">
-                <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button victoria-one">sell</a> </div>
-                <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button victoria-two">buy</a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6"> <a href="sell.html" class="btn btn-sm animated-button victoria-one">sell</a> </div>
+                <div class="col-md-3 col-sm-3 col-xs-6"> <a href="buy.html" class="btn btn-sm animated-button victoria-two">buy</a> </div>
             </div>
         </div>
         <div style="background: linear-gradient(rgb(255, 255, 255), rgb(187, 235, 228), rgb(255, 255, 255));" class="how-it-works-lg">
@@ -345,14 +349,14 @@
 
         </div>
 
-        <div class="buy-a-phone">
+        <div id="buy-a-phone" class="buy-a-phone">
             <h3 style="text-align:center; color:#07454C;">Buy a phone</h3>
 
 
 
         </div>
 
-        <div style="background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));" class="sell-a-phone">
+        <div id="sell-a-phone" style="background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));" class="sell-a-phone">
             <br>
             <h3 style="text-align:center;  color:#07454C;">Sell a phone</h3>
 
