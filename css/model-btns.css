@@ -14,6 +14,8 @@
 
 .mbf {
     margin-bottom: 20px !important;
+    font-weight: 600;
+    color: #07454C;
 }
 
 .mbf label,
