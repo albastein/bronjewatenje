@@ -85,18 +85,29 @@ jQuery(document).ready(function() {
 
     });
 
-    // previous step
-    $('form .btn-previous').on('click', function() {
+    // previous step button in step 2
+    $('form .btn-ps2').on('click', function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
         $(this).parents('fieldset').fadeOut(400, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
-            $(this).prev().fadeIn();
+            $(this).prevAll('.all-brands').fadeIn();
             scroll_to_class($('form'), 20);
         });
     });
+
+    // previous step button in step 3
+
+    // previous step button in step 4
+
+    // previous step button in step 5
+
+    // previous step button in step 6
+
+    // previous step button in step 7
+
 
     $('form').on('submit', function(e) {
         $(this).find('input[type="text"], input[type="password"], input[type="username"], input[type="email"], input[type="tel"], input[type="url"], textarea').each(function() {
