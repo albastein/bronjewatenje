@@ -25,6 +25,8 @@ jQuery(document).ready(function() {
         var next_step = true;
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+        var brand = document.getElementById("sell-wiz").elements["brand"];
+        var brand_value = brand.value;
 
         // Validation
 
@@ -55,13 +57,31 @@ jQuery(document).ready(function() {
         */
 
         if (next_step) {
-            parent_fieldset.fadeOut(400, function() {
-                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-                bar_progress(progress_line, 'right');
-                $(this).next().fadeIn();
-                scroll_to_class($('form'), 20);
-            });
+            if (brand_value == 'huawei') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.model-huawei').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (brand_value == 'iphone') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.model-iphone').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.model-samsung').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            }
         }
+
+
 
     });
 

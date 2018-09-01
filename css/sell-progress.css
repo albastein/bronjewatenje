@@ -111,12 +111,14 @@ fieldset {
 */
 
 .btn-previous {
-    background-color: lightgrey;
+    background-color: rgb(187, 186, 186);
+    margin: 0 5px;
 }
 
 .btn-next {
     background-color: #0B454C;
     color: white;
+    margin: 0 5px;
 }
 
 iframe {

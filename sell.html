@@ -58,7 +58,7 @@
     <div style="background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));" class="sell-a-phone">
         <br>
         <h3 style="text-align:center;  color:#07454C;">Sell a phone</h3>
-        <form name="sell-wiz" class="sell-wizard" action="save.php" method="post">
+        <form id="sell-wiz" name="sell-wiz" class="sell-wizard" action="save.php" method="post">
             <div class="wizards wizards-sm smaller-text">
 
                 <div class="progressbar">
@@ -142,30 +142,30 @@
                     <div class="nopad text-center float-left" style="display:inline-block; cursor: pointer;">
                         <label class="image-radio">
                             <img class="shadowed br-hua img-responsive" src="/images/brands/huawei.svg">
-                            <input type="radio" name="huawei" value="huawei" />
+                            <input type="radio" name="brand" value="huawei" />
                             <div><i class="d-none fa fa-check"></i></div>
                         </label>
                     </div>
                     <div class="nopad text-center float-left" style="display:inline-block; cursor: pointer;">
                         <label class="image-radio">
                             <img class="shadowed br-hua img-responsive" src="/images/brands/apple.svg">
-                            <input type="radio" name="iphone" value="iphone" />
+                            <input type="radio" name="brand" value="iphone" />
                             <div><i class="d-none fa fa-check"></i></div>
                         </label>
                     </div>
                     <div class="nopad text-center float-left" style="display:inline-block; cursor: pointer;">
                         <label class="image-radio">
                             <img class="shadowed br-hua img-responsive" src="/images/brands/samsung.svg">
-                            <input type="radio" name="samsung" value="samsung" />
+                            <input type="radio" name="brand" value="samsung" />
                             <div><i class="d-none fa fa-check"></i></div>
                         </label>
                     </div>
                 </div>
                 <div class="wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button id="brand-button" type="button" class="btn btn-next">Next</button>
                 </div>
             </fieldset>
-            <fieldset class="model-huawei ">
+            <fieldset class="model-huawei">
                 <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Which Huawei model?</h4>
                 <div class="container">
                     <div>
@@ -258,17 +258,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                    <button type="button" class="btn btn-previous">Previous</button>
                     <button type="button" class="btn btn-next">Next</button>
                 </div>
             </fieldset>
-            <fieldset class="model-iphone ">
+            <fieldset class="model-iphone">
                 <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Which iPhone model?</h4>
                 <div>
 
                 </div>
             </fieldset>
-            <fieldset class="model-samsung ">
+            <fieldset class="model-samsung">
                 <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Which Samsung model?</h4>
                 <div>
 
