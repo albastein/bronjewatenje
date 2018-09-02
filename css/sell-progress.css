@@ -45,7 +45,7 @@ form fieldset {
     background: #ddd;
     font-size: 16px;
     color: #fff;
-    line-height: 24px;
+    line-height: 23px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -55,7 +55,7 @@ form fieldset {
     background: #fff;
     border: 1px solid #0B454C;
     color: #0B454C;
-    line-height: 21px;
+    line-height: 24px;
 }
 
 .form-wizard.active .wizard-icon {
@@ -65,6 +65,16 @@ form fieldset {
     background: #0B454C;
     font-size: 16px;
     line-height: 24px;
+}
+
+.fa-star {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.form-wizard.activated .fa-star {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .form-wizard p {

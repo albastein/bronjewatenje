@@ -85,7 +85,7 @@ jQuery(document).ready(function() {
         }
     });
 
-    // Step 2 (model) buttons
+    /* Step 2 (model) buttons */
     // Previous
 
     $('form .model-btn-previous').on('click', function() {
@@ -110,6 +110,9 @@ jQuery(document).ready(function() {
         var model_value = model.value;
 
         if (next_step) {
+
+            // Huawei models
+
             if (model_value == 'Huawei P20 Pro') {
                 parent_fieldset.fadeOut(400, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
@@ -230,12 +233,110 @@ jQuery(document).ready(function() {
                     scroll_to_class($('form'), 20);
                 });
             }
+
+            // iPhone models
+            else if (model_value == 'iPhone X') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ipx').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 8 plus') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip8p').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 8') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip8').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 7 plus') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip7p').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 7') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip7').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 6s plus') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip6sp').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 6 plus') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip6p').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 6s') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip6s').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 6') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip6').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 5s') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip5s').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 5c') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip5c').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone 5') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ip5').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'iPhone SE') {
+                parent_fieldset.fadeOut(400, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ipse').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            }
+
+            // Samsung models
+
         }
 
     });
 
-    // Step 3 (capacity) buttons
+    /* Step 3 (capacity) buttons */
     // Previous
+    // Huawei
     $('form .hc-btn-previous').on('click', function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
@@ -248,13 +349,52 @@ jQuery(document).ready(function() {
         });
     });
 
-    // previous step button in step 4
+    // iPhone
+    $('form .ic-btn-previous').on('click', function() {
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
 
-    // previous step button in step 5
+        $(this).parents('fieldset').fadeOut(400, function() {
+            current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
+            bar_progress(progress_line, 'left');
+            $(this).prevAll('.model-iphone').fadeIn();
+            scroll_to_class($('form'), 20);
+        });
+    });
 
-    // previous step button in step 6
+    // Samsung
 
-    // previous step button in step 7
+    // next
+
+
+
+    /* previous step button in step 4 */
+    // previous
+
+    // next
+
+
+
+    /* previous step button in step 5 */
+    // previous
+
+    // next
+
+
+
+    /* previous step button in step 6 */
+    // previous
+
+    // next
+
+
+
+    /* previous step button in step 7 */
+    // previous
+
+    // next
+
+
 
 
     $('form').on('submit', function(e) {
