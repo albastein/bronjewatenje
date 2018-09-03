@@ -40,6 +40,9 @@ $theme-colors: ( "primary": #07454C);
 
 // Do not diplay large banner in small devices
 @media (max-width: 767px) {
+    .big-logo {
+        display: none;
+    }
     .owl-nav {
         display: none;
     }
@@ -218,6 +221,9 @@ $theme-colors: ( "primary": #07454C);
 }
 
 @media (min-width: 767px) {
+    .small-logo {
+        display: none;
+    }
     .owl-dots {
         display: none;
     }
