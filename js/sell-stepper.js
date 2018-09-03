@@ -21,6 +21,14 @@ jQuery(document).ready(function() {
 
     $('form fieldset:first').fadeIn('slow');
 
+    // Clear checked values of radio buttons on returning to previous step
+
+    $('form .btn-previous').on('click', function() {
+        $('.sell-rdb').prop('checked', false);
+        $('.sell-rdb').parent().removeClass('mbf-checked');
+        $('.sell-rdb').parent().removeClass('cbf-checked');
+    });
+
     // Step 1 (brand) Next button
 
     $('form .brand-btn-next').on('click', function() {
@@ -74,7 +82,7 @@ jQuery(document).ready(function() {
                     $(this).nextAll('.model-iphone').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
-            } else {
+            } else if (brand_value == 'samsung') {
                 parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
@@ -82,6 +90,9 @@ jQuery(document).ready(function() {
                     scroll_to_class($('form'), 20);
                 });
             }
+
+            $('.sell-rdb').prop('checked', false);
+            $('.sell-rdb').parent().removeClass('image-radio-checked');
         }
     });
 
@@ -526,6 +537,10 @@ jQuery(document).ready(function() {
                     scroll_to_class($('form'), 20);
                 });
             }
+
+            // Remove checked status
+            $('.sell-rdb').prop('checked', false);
+            $('.sell-rdb').parent().removeClass('mbf-checked');
         }
     });
 

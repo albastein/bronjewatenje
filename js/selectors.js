@@ -8,6 +8,7 @@ $(document).ready(function() {
         } else {
             $(this).removeClass('image-radio-checked');
         }
+
     });
 
     // sync the input state
@@ -19,8 +20,6 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
-
-
 
 
     /*Check Box*/
