@@ -12,14 +12,14 @@
     position: relative;
 }
 
-.mbf {
+.cbf {
     margin-bottom: 20px !important;
     font-weight: 400;
     color: #07454C;
 }
 
-.mbf label,
-.mbf input {
+.cbf label,
+.cbf input {
     display: block;
     position: absolute;
     top: 0;
@@ -28,11 +28,11 @@
     bottom: 0;
 }
 
-.mbf input[type="radio"] {
+.cbf input[type="radio"] {
     display: none;
 }
 
-.mbf .fa {
+.cbf .fa {
     position: absolute;
     color: #fff;
     background-color: #07454C;
@@ -41,16 +41,16 @@
     right: 0;
 }
 
-.mbf-checked .fa {
+.cbf-checked .fa {
     overflow: hidden;
     display: block !important;
 }
 
-.mbf-checked label {
+.cbf-checked label {
     border: 2px solid #07454C !important;
 }
 
-.mbf label {
+.cbf label {
     padding: 12px 0 37px 0;
     border: 2px solid #CCC;
     cursor: pointer;

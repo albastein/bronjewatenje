@@ -61,21 +61,21 @@ jQuery(document).ready(function() {
 
         if (next_step) {
             if (brand_value == 'huawei') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.model-huawei').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (brand_value == 'iphone') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.model-iphone').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.model-samsung').fadeIn();
@@ -92,7 +92,7 @@ jQuery(document).ready(function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
-        $(this).parents('fieldset').fadeOut(400, function() {
+        $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.all-brands').fadeIn();
@@ -114,119 +114,119 @@ jQuery(document).ready(function() {
             // Huawei models
 
             if (model_value == 'Huawei P20 Pro') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp20pro').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P20') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp20').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P20 Lite') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp20l').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P10 Plus') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp10p').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P10') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp10').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P10 Lite') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp10l').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P9 Plus') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp9p').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P9') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp9').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P9 Lite') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp9l').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P8') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp8').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P8 Lite (2017)') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp8l17').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P8 Lite') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hp8l').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei Mate 10 Pro') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hm10p').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei Mate 10') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hm10').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei Mate 9') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hm9').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei Mate 8') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hm8').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'Huawei P Smart') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-hps').fadeIn();
@@ -236,91 +236,91 @@ jQuery(document).ready(function() {
 
             // iPhone models
             else if (model_value == 'iPhone X') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ipx').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 8 plus') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip8p').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 8') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip8').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 7 plus') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip7p').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 7') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip7').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 6s plus') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip6sp').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 6 plus') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip6p').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 6s') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip6s').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 6') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip6').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 5s') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip5s').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 5c') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip5c').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone 5') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ip5').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
             } else if (model_value == 'iPhone SE') {
-                parent_fieldset.fadeOut(400, function() {
+                parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.capacity-ipse').fadeIn();
@@ -329,9 +329,204 @@ jQuery(document).ready(function() {
             }
 
             // Samsung models
-
+            else if (model_value == 'Galaxy S9p') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs9p').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S9') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs9').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S8p') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs8p').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S8') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs8').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S7 Edge') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs7e').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S7') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs7').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S6 Edge p') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs6ep').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S6 Edge') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs6e').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S6') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs6').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S5') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs5').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy S4') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gs4').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy Note 8') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gn8').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy Note 5') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gn5').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy Edge') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ge').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy Note 4') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gn4').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy Note 3') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gn3').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A8 (2018)') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga818').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A7 (2017)') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga717').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A7 (2016)') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga716').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A7') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga7').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A5 (2017)') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga517').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A5 (2016)') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga516').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A5') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga5').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A3 (2016)') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga316').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy A3') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-ga3').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy J7 (2016)') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gj716').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy J7 Prime') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gj7p').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            } else if (model_value == 'Galaxy J5 Prime') {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.capacity-gj5p').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            }
         }
-
     });
 
     /* Step 3 (capacity) buttons */
@@ -341,7 +536,7 @@ jQuery(document).ready(function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
-        $(this).parents('fieldset').fadeOut(400, function() {
+        $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.model-huawei').fadeIn();
@@ -354,7 +549,7 @@ jQuery(document).ready(function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
-        $(this).parents('fieldset').fadeOut(400, function() {
+        $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.model-iphone').fadeIn();
@@ -363,6 +558,17 @@ jQuery(document).ready(function() {
     });
 
     // Samsung
+    $('form .sc-btn-previous').on('click', function() {
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
+
+        $(this).parents('fieldset').fadeOut(200, function() {
+            current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
+            bar_progress(progress_line, 'left');
+            $(this).prevAll('.model-samsung').fadeIn();
+            scroll_to_class($('form'), 20);
+        });
+    });
 
     // next
 

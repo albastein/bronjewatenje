@@ -45,7 +45,7 @@ form fieldset {
     background: #ddd;
     font-size: 16px;
     color: #fff;
-    line-height: 23px;
+    line-height: 22px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -55,7 +55,7 @@ form fieldset {
     background: #fff;
     border: 1px solid #0B454C;
     color: #0B454C;
-    line-height: 24px;
+    line-height: 22px;
 }
 
 .form-wizard.active .wizard-icon {
@@ -64,7 +64,7 @@ form fieldset {
     margin-top: 12px;
     background: #0B454C;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
 }
 
 .fa-star {
