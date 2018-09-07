@@ -44,3 +44,26 @@ $(document).ready(function() {
         e.preventDefault();
     });
 });
+
+// Working Status buttons
+
+$(document).ready(function() {
+    // add/remove checked class
+    $(".wsbf").each(function() {
+        if ($(this).find('input[type="radio"]').first().attr("checked")) {
+            $(this).addClass('wsbf-checked');
+        } else {
+            $(this).removeClass('wsbf-checked');
+        }
+    });
+
+    // sync the input state
+    $(".wsbf").on("click", function(e) {
+        $(".wsbf").removeClass('wsbf-checked');
+        $(this).addClass('wsbf-checked');
+        var $radio = $(this).find('input[type="radio"]');
+        $radio.prop("checked", !$radio.prop("checked"));
+
+        e.preventDefault();
+    });
+});

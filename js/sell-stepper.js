@@ -21,13 +21,15 @@ jQuery(document).ready(function() {
 
     $('form fieldset:first').fadeIn('slow');
 
-    // Clear checked values of radio buttons on returning to previous step
-
+    // Clear checked status of radio buttons on returning to previous step
+    /*
     $('form .btn-previous').on('click', function() {
         $('.sell-rdb').prop('checked', false);
         $('.sell-rdb').parent().removeClass('mbf-checked');
         $('.sell-rdb').parent().removeClass('cbf-checked');
     });
+    */
+
 
     // Step 1 (brand) Next button
 
@@ -91,8 +93,6 @@ jQuery(document).ready(function() {
                 });
             }
 
-            $('.sell-rdb').prop('checked', false);
-            $('.sell-rdb').parent().removeClass('image-radio-checked');
         }
     });
 
@@ -340,7 +340,7 @@ jQuery(document).ready(function() {
             }
 
             // Samsung models
-            else if (model_value == 'Galaxy S9p') {
+            else if (model_value == 'Galaxy S9 Plus') {
                 parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
@@ -354,7 +354,7 @@ jQuery(document).ready(function() {
                     $(this).nextAll('.capacity-gs9').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
-            } else if (model_value == 'Galaxy S8p') {
+            } else if (model_value == 'Galaxy S8 Plus') {
                 parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
@@ -382,7 +382,7 @@ jQuery(document).ready(function() {
                     $(this).nextAll('.capacity-gs7').fadeIn();
                     scroll_to_class($('form'), 20);
                 });
-            } else if (model_value == 'Galaxy S6 Edge p') {
+            } else if (model_value == 'Galaxy S6 Edge Plus') {
                 parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
@@ -537,10 +537,11 @@ jQuery(document).ready(function() {
                     scroll_to_class($('form'), 20);
                 });
             }
-
+            /*
             // Remove checked status
             $('.sell-rdb').prop('checked', false);
             $('.sell-rdb').parent().removeClass('mbf-checked');
+            */
         }
     });
 
@@ -586,11 +587,43 @@ jQuery(document).ready(function() {
     });
 
     // next
+    $('form .capacity-btn-next').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
 
+        parent_fieldset.find('input[type="radio"]').each(function() {
+            if ($(this).prop("checked") == true) {
+                parent_fieldset.addClass('selected_capacity');
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.working_status').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
 
+                $('.phone-mdl-ws').append(document.getElementById("sell-wiz").elements["model"].value);
+            }
+            // else request user to select capacity
+        });
+    });
 
     /* previous step button in step 4 */
     // previous
+    $('form .ws-btn-previous').on('click', function() {
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
+
+        $('.phone-mdl-ws').replaceWith('<span class="phone-mdl-ws"></span>');
+        $(this).parents('fieldset').fadeOut(200, function() {
+            current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
+            bar_progress(progress_line, 'left');
+            $(this).prevAll('.selected_capacity').fadeIn().removeClass('selected_capacity');
+            scroll_to_class($('form'), 20);
+        });
+    });
+
+
 
     // next
 
@@ -628,8 +661,13 @@ jQuery(document).ready(function() {
             }
         });
     });
-
 });
+
+/*
+
+*/
+
+
 
 // Validation 
 
