@@ -624,9 +624,26 @@ jQuery(document).ready(function() {
     });
 
 
-
     // next
+    $('form .ws-btn-next').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
 
+        parent_fieldset.find('input[type="radio"]').each(function() {
+            if ($(this).prop("checked") == true) {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.accessories').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+
+                $('.phone-mdl-accs').append(document.getElementById("sell-wiz").elements["model"].value);
+            }
+            // else request user to select capacity
+        });
+    });
 
 
     /* previous step button in step 5 */

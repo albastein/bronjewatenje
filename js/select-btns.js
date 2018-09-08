@@ -67,3 +67,26 @@ $(document).ready(function() {
         e.preventDefault();
     });
 });
+
+// Accessories buttons
+
+$(document).ready(function() {
+    // add/remove checked class
+    $(".acbf").each(function() {
+        if ($(this).find('input[type="radio"]').first().attr("checked")) {
+            $(this).addClass('acbf-checked');
+        } else {
+            $(this).removeClass('acbf-checked');
+        }
+    });
+
+    // sync the input state
+    $(".acbf").on("click", function(e) {
+        $(".acbf").removeClass('acbf-checked');
+        $(this).addClass('acbf-checked');
+        var $radio = $(this).find('input[type="radio"]');
+        $radio.prop("checked", !$radio.prop("checked"));
+
+        e.preventDefault();
+    });
+});

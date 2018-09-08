@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/model-btns.css">
     <link rel="stylesheet" href="css/capacity-btns.css">
     <link rel="stylesheet" href="css/working-status-btns.css">
+    <link rel="stylesheet" href="css/accessories-btns.css">
 </head>
 
 <body>
@@ -1837,7 +1838,7 @@
                 </div>
             </fieldset>
 
-            <!-- Working Status fieldsets-->
+            <!-- Working Status fieldset-->
 
             <fieldset class="working_status ">
                 <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">What is your
@@ -1846,24 +1847,24 @@
                     <div>
                         <ul class="h-ws row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
                             <li class="wsbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb" id="sc51" name="capacity" value="16" />
-                                <label class="ws-btn-labels" for="sc51">
+                                <input type="radio" class="sell-rdb" id="ws1" name="working_status" value="Excellent" />
+                                <label class="ws-btn-labels" for="ws11">
                                     <p id="wslbl">Excellent</p>                                   
                                     <p>Good as new. Has no dents or scratches.</p>
                                 </label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="wsbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb" id="sc51" name="capacity" value="16" />
-                                <label class="ws-btn-labels" for="sc51">
+                                <input type="radio" class="sell-rdb" id="ws2" name="working_status" value="Good" />
+                                <label class="ws-btn-labels" for="ws2">
                                     <p id="wslbl">Good</p>
                                     <p>Only has light scratches and works perfectly.</p>
                                 </label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="wsbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb" id="sc51" name="capacity" value="16" />
-                                <label class="ws-btn-labels" for="sc51">
+                                <input type="radio" class="sell-rdb" id="ws3" name="working_status" value="Damaged" />
+                                <label class="ws-btn-labels" for="ws3">
                                     <p id="wslbl">Damaged</p>
                                     <p>Switches on and works but screen is cracked.</p>
                                 </label>
@@ -1874,11 +1875,33 @@
                 </div>
                 <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
                     <button type="button" class="btn btn-previous ws-btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button type="button" class="btn btn-next ws-btn-next">Next</button>
                 </div>
             </fieldset>
-            <fieldset class="accessories ">
 
+            <!-- Accessories fieldset-->
+            <fieldset class="accessories ">
+                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">What original accessories are included with your <span class="phone-mdl-accs"></span>?</h4>
+                <div class="container">
+                    <div>
+                        <ul class="h-ac row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                            <li class="acbf text-center col-sm-6 col-md-6 col-lg-3">
+                                <input type="radio" class="sell-rdb" id="ac1" name="accessories" value="Wall Charger" />
+                                <label class="ws-btn-labels" for="ac1">Wall Charger</label>
+                                <div><i class="d-none fa fa-check"></i></div>
+                            </li>
+                            <li class="acbf text-center col-sm-6 col-md-6 col-lg-3">
+                                <input type="radio" class="sell-rdb" id="ac2" name="accessories" value="USB Cable" />
+                                <label class="ws-btn-labels" for="ac2">USB Cable</label>
+                                <div><i class="d-none fa fa-check"></i></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                    <button type="button" class="btn btn-previous accs-btn-previous">Previous</button>
+                    <button type="button" class="btn btn-next accs-btn-next">Next</button>
+                </div>
             </fieldset>
             <fieldset class="details ">
 
