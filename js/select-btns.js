@@ -1,7 +1,7 @@
-/*Radio*/
-// Model buttons
-
 $(document).ready(function() {
+    /*Radio*/
+    // Model buttons
+
     // add/remove checked class
     $(".mbf").each(function() {
         if ($(this).find('input[type="radio"]').first().attr("checked")) {
@@ -20,11 +20,10 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
-});
 
-// Capacity buttons
 
-$(document).ready(function() {
+    // Capacity buttons
+
     // add/remove checked class
     $(".cbf").each(function() {
         if ($(this).find('input[type="radio"]').first().attr("checked")) {
@@ -43,11 +42,10 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
-});
 
-// Working Status buttons
 
-$(document).ready(function() {
+    // Working Status buttons
+
     // add/remove checked class
     $(".wsbf").each(function() {
         if ($(this).find('input[type="radio"]').first().attr("checked")) {
@@ -66,14 +64,13 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
-});
 
-// Accessories buttons
 
-$(document).ready(function() {
+    // Accessories buttons
+
     // add/remove checked class
     $(".acbf").each(function() {
-        if ($(this).find('input[type="radio"]').first().attr("checked")) {
+        if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
             $(this).addClass('acbf-checked');
         } else {
             $(this).removeClass('acbf-checked');
@@ -82,10 +79,9 @@ $(document).ready(function() {
 
     // sync the input state
     $(".acbf").on("click", function(e) {
-        $(".acbf").removeClass('acbf-checked');
-        $(this).addClass('acbf-checked');
-        var $radio = $(this).find('input[type="radio"]');
-        $radio.prop("checked", !$radio.prop("checked"));
+        $(this).toggleClass('acbf-checked');
+        var $checkbox = $(this).find('input[type="checkbox"]');
+        $checkbox.prop("checked", !$checkbox.prop("checked"));
 
         e.preventDefault();
     });

@@ -28,7 +28,7 @@
     bottom: 0;
 }
 
-.acbf input[type="radio"] {
+.acbf input[type="checkbox"] {
     display: none;
 }
 
