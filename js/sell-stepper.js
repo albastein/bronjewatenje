@@ -608,18 +608,19 @@ jQuery(document).ready(function() {
         });
     });
 
-    /* previous step button in step 4 */
+    /* previous step button in step 4 (Working Status) */
     // previous
     $('form .ws-btn-previous').on('click', function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
-        $('.phone-mdl-ws').replaceWith('<span class="phone-mdl-ws"></span>');
+
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.selected_capacity').fadeIn().removeClass('selected_capacity');
             scroll_to_class($('form'), 20);
+            $('.phone-mdl-ws').replaceWith('<span class="phone-mdl-ws"></span>');
         });
     });
 
@@ -646,9 +647,22 @@ jQuery(document).ready(function() {
     });
 
 
-    /* previous step button in step 5 */
+    /* previous step button in step 5 (Accessories) */
     // previous
+    $('form .accs-btn-previous').on('click', function() {
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
 
+
+        $(this).parents('fieldset').fadeOut(200, function() {
+            current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
+            bar_progress(progress_line, 'left');
+            $(this).prevAll('.working_status').fadeIn();
+            scroll_to_class($('form'), 20);
+            $('.phone-mdl-accs').replaceWith('<span class="phone-mdl-accs"></span>');
+        });
+
+    });
     // next
 
 
