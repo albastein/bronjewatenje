@@ -686,7 +686,19 @@ jQuery(document).ready(function() {
 
     /* previous step button in step 6 (Details) */
     // previous
+    $('form .dtls-btn-previous').on('click', function() {
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
 
+
+        $(this).parents('fieldset').fadeOut(200, function() {
+            current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
+            bar_progress(progress_line, 'left');
+            $(this).prevAll('.accessories').fadeIn();
+            scroll_to_class($('form'), 20);
+        });
+
+    });
     // next
 
 
