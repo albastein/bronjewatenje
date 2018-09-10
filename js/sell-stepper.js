@@ -663,18 +663,35 @@ jQuery(document).ready(function() {
         });
 
     });
+
     // next
+    $('form .accs-btn-next').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
+
+        parent_fieldset.find('input[type="checkbox"]').each(function() {
+            if ($(this).prop("checked") == true) {
+                parent_fieldset.fadeOut(200, function() {
+                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                    bar_progress(progress_line, 'right');
+                    $(this).nextAll('.details').fadeIn();
+                    scroll_to_class($('form'), 20);
+                });
+            }
+            // else request user to select capacity
+        });
+    });
 
 
-
-    /* previous step button in step 6 */
+    /* previous step button in step 6 (Details) */
     // previous
 
     // next
 
 
 
-    /* previous step button in step 7 */
+    /* previous step button in step 7 (Value)*/
     // previous
 
     // next
