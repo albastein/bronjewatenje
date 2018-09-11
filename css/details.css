@@ -1,7 +1,7 @@
 .dtin p {
     font: 13px Open Sans;
     margin-bottom: 30px;
-    margin-left: 4px;
+    margin-left: 4.5px;
 }
 
 .dtin input[type="text"],
@@ -15,7 +15,7 @@ input[type="email"] {
     border: none;
     border: 1px solid #07454C;
     margin-bottom: 10px;
-    margin-left: 4px;
+    margin-left: 4.5px;
     color: rgb(0, 0, 0);
     text-shadow: rgb(255, 255, 255) 0px 1px 4px;
 }
