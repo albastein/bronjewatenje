@@ -6307,6 +6307,9 @@ a.text-dark:hover, a.text-dark:focus {
     display: none; } }
 
 @media (max-width: 767px) {
+  .dtin {
+    width: 100%;
+    margin: 0 auto; }
   .big-logo {
     display: none; }
   .owl-nav {
@@ -6493,6 +6496,9 @@ a.text-dark:hover, a.text-dark:focus {
     position: relative; }
   .banner-sm {
     display: none; }
+  .dtin {
+    width: 420px;
+    margin: 0 auto; }
   .wizards-sm {
     display: none; }
   .how-it-works-sm {

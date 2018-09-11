@@ -40,6 +40,10 @@ $theme-colors: ( "primary": #07454C);
 
 // Do not diplay large banner in small devices
 @media (max-width: 767px) {
+    .dtin {
+        width: 100%;
+        margin: 0 auto;
+    }
     .big-logo {
         display: none;
     }
@@ -269,6 +273,10 @@ $theme-colors: ( "primary": #07454C);
     //Do not display small banner content to large devices
     .banner-sm {
         display: none;
+    }
+    .dtin {
+        width: 420px;
+        margin: 0 auto;
     }
     .wizards-sm {
         display: none;
