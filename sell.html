@@ -66,7 +66,7 @@
     <div style="background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));" class="sell-a-phone">
         <br>
 
-        <form id="sell-wiz" name="sell-wiz" class="sell-wizard" action="save.php" method="post">
+        <form id="sell-wiz" name="sell-wiz" class="sell-wizard" action="php/sellconn.php" method="get">
             <h3 style="text-align:center;  color:#07454C;">Sell a phone</h3>
             <div class="wizards wizards-sm smaller-text">
 
@@ -162,8 +162,10 @@
                         </label>
                     </div>
                 </div>
+
                 <div class="wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
-                    <button id="brand-button" type="button" class="btn btn-next brand-btn-next">Next</button>
+
+                    <button id="brand-button" type="button" class="btn btn-next brand-btn-next" data-container="body" data-toggle="popover" data-placement="top" data-content="Oops! Please select a brand.">Next</button>
                 </div>
             </fieldset>
 
@@ -1909,19 +1911,19 @@
                 <h4 class="text-center" style="margin-top: 30px; margin-bottom: 30px; color:#07454C;">Welcome back</h4>
                 <h5 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please enter your contact details</h5>
                 <div class="container dtin">
-                    <input type="text" class="dt-fname" name="firstName" placeholder="first name">
+                    <input type="text" class="dt-fname" name="firstName" placeholder="first name" required>
                     <div>
                         <p class="fname-help">Please enter your first name.</p>
                     </div>
-                    <input type="text" class="dt-lname" name="lastName" placeholder="second name">
+                    <input type="text" class="dt-lname" name="lastName" placeholder="second name" required>
                     <div>
                         <p class="lname-help">Please enter your last name.</p>
                     </div>
-                    <input type="email" class="dt-email" name="email" placeholder="email">
+                    <input type="email" class="dt-email" name="email" placeholder="email" required>
                     <div>
                         <p class="email-help">Please enter your current email address.</p>
                     </div>
-                    <input type="text" class="dt-pnum" name="phoneNumber" placeholder="phone number">
+                    <input type="text" class="dt-pnum" name="phoneNumber" placeholder="phone number" required>
                     <div>
                         <p class="pnum-help">Please enter your phone number e.g. 0733 123 456.</p>
                     </div>
@@ -1932,7 +1934,10 @@
                 </div>
             </fieldset>
             <fieldset class="value ">
-
+                <?php echo <p>this is a test</p>
+                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                    <button type="button" class="btn btn-previous val-btn-previous">Previous</button>
+                </div>
             </fieldset>
 
 
@@ -1978,7 +1983,7 @@
     </svg>
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js "></script>
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/sell-stepper.js "></script>
     <script src="js/selectors.js "></script>
@@ -1986,4 +1991,4 @@
     <script src="js/details.js"></script>
 </body>
 
-</html>
+</html

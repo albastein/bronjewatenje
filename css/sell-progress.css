@@ -135,6 +135,10 @@ fieldset {
     margin: 0 5px;
 }
 
+.input-error {
+    border-color: red;
+}
+
 iframe {
     width: 100%;
     height: 400px;

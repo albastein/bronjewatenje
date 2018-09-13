@@ -1,3 +1,11 @@
+// Fix for bootstrap tooltips, sometimes they are left in the DOM when they shouldn't be.
+$('body').on('hidden.bs.tooltip', function() {
+    var tooltips = $('.tooltip').not('.in');
+    if (tooltips) {
+        tooltips.remove();
+    }
+});
+
 function scroll_to_class(element_class, removed_height) {
     var scroll_to = $(element_class).offset().top - removed_height;
     if ($(window).scrollTop() != scroll_to) {
@@ -41,10 +49,11 @@ jQuery(document).ready(function() {
         var brand = document.getElementById("sell-wiz").elements["brand"];
         var brand_value = brand.value;
 
+
         // Validation
 
         /*
-        parent_fieldset.find('input[type="text"], input[type="password"], input[type="username"], input[type="email"], input[type="tel"], input[type="url"], textarea').each(function() {
+        parent_fieldset.find('input[type="radio"], input[type="checkbox"], input[type="text"], input[type="email"]').each(function() {
             if ($(this).val() == "") {
                 $(this).addClass('input-error');
                 next_step = false;
@@ -52,8 +61,33 @@ jQuery(document).ready(function() {
                 $(this).removeClass('input-error');
             }
         });
-
         */
+
+
+        if (brand_value == "") {
+            $('.brand-btn-next').popover('enable');
+            $('.brand-btn-next').popover('show');
+            $('.brand-btn-next').on('shown.bs.popover', function() {
+                var $pop = $(this);
+                setTimeout(function() {
+                    $pop.popover('hide');
+                }, 2000);
+                setTimeout(function() {
+                    $pop.popover();
+                }, 2200);
+            });
+
+            next_step = false;
+        } else {
+            $('.brand-btn-next').popover('disable');
+        }
+
+
+        // brand.addClass('input-error')
+
+
+
+
 
         // Brand selector validation
 
@@ -700,26 +734,44 @@ jQuery(document).ready(function() {
 
     });
     // next
+    $('form .dtls-btn-next').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
+        var fnbox = document.forms["sell-wiz"]["firstName"].value;
+        var lnbox = document.forms["sell-wiz"]["lastName"].value;;
+        var ebox = document.forms["sell-wiz"]["email"].value;
+        var pnbox = document.forms["sell-wiz"]["phoneNumber"].value;
 
+        if (fnbox !== "" && lnbox !== "" && ebox !== "" && pnbox !== "") {
+            parent_fieldset.fadeOut(200, function() {
+                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                bar_progress(progress_line, 'right');
+                $(this).nextAll('.value').fadeIn();
+                scroll_to_class($('form'), 20);
+            });
+        }
+        // else request user to select capacity
+        else {
+            alert("Fill in all details");
+        }
+    });
 
 
     /* previous step button in step 7 (Value)*/
     // previous
+    $('form .val-btn-previous').on('click', function() {
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
 
-    // next
 
-
-
-
-    $('form').on('submit', function(e) {
-        $(this).find('input[type="text"], input[type="password"], input[type="username"], input[type="email"], input[type="tel"], input[type="url"], textarea').each(function() {
-            if ($(this).val() == "") {
-                e.preventDefault();
-                $(this).addClass('input-error');
-            } else {
-                $(this).removeClass('input-error');
-            }
+        $(this).parents('fieldset').fadeOut(200, function() {
+            current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
+            bar_progress(progress_line, 'left');
+            $(this).prevAll('.details').fadeIn();
+            scroll_to_class($('form'), 20);
         });
+
     });
 });
 
@@ -731,7 +783,7 @@ jQuery(document).ready(function() {
 
 // Validation 
 
-/* 
+/*
 function validateRadio(radios) {
     for (i = 0; i < radios.length; ++i) {
         if (radios[i].checked) return true;

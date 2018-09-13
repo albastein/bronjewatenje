@@ -40,37 +40,3 @@
     overflow: hidden;
     display: block !important;
 }
-
-
-/*Check-box*/
-
-.image-checkbox {
-    cursor: pointer;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border: 4px solid transparent;
-    margin-bottom: 0;
-    outline: 0;
-}
-
-.image-checkbox input[type="checkbox"] {
-    display: none;
-}
-
-.image-checkbox-checked {
-    border-color: #07454C;
-}
-
-.image-checkbox .fa {
-    position: absolute;
-    color: #fff;
-    background-color: #07454C;
-    padding: 10px;
-    top: 0;
-    right: 0;
-}
-
-.image-checkbox-checked .fa {
-    display: block !important;
-}
