@@ -31,12 +31,12 @@ jQuery(document).ready(function() {
 
     // Clear checked status of radio buttons on returning to previous step
     /*
-    $('form .btn-previous').on('click', function() {
-        $('.sell-rdb').prop('checked', false);
-        $('.sell-rdb').parent().removeClass('mbf-checked');
-        $('.sell-rdb').parent().removeClass('cbf-checked');
-    });
-    */
+    $('form .model-btn-previous').on('click', function() {
+            $('.model-sell-rdb').each().prop('checked', false);
+            $('.model-sell-rdb').each().parent().removeClass('mbf-checked');
+        });
+        */
+
 
 
     // Step 1 (brand) Next button
@@ -49,20 +49,7 @@ jQuery(document).ready(function() {
         var brand = document.getElementById("sell-wiz").elements["brand"];
         var brand_value = brand.value;
 
-
         // Validation
-
-        /*
-        parent_fieldset.find('input[type="radio"], input[type="checkbox"], input[type="text"], input[type="email"]').each(function() {
-            if ($(this).val() == "") {
-                $(this).addClass('input-error');
-                next_step = false;
-            } else {
-                $(this).removeClass('input-error');
-            }
-        });
-        */
-
 
         if (brand_value == "") {
             $('.brand-btn-next').popover('enable');
@@ -81,27 +68,6 @@ jQuery(document).ready(function() {
         } else {
             $('.brand-btn-next').popover('disable');
         }
-
-
-        // brand.addClass('input-error')
-
-
-
-
-
-        // Brand selector validation
-
-        /*
-        parent_fieldset.find('input[type="radio"]').each(function() {
-            if ($(this).prop("checked") == false) {
-                alert('Please answer all questions');
-                next_step = false;
-            } else {
-                $('.form-check-label').css("color", "black");
-            }
-        });
-
-        */
 
         if (next_step) {
             if (brand_value == 'huawei') {
@@ -134,25 +100,58 @@ jQuery(document).ready(function() {
     // Previous
 
     $('form .model-btn-previous').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var model_rdb = parent_fieldset.find('.model-sell-rdb');
+        var brand_rdb = $('.brand-sell-rdb');
+        var brand_rdb_bd = $('.image-radio-checked');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+        brand_rdb.prop('checked', false);
+        brand_rdb_bd.removeClass('image-radio-checked');
 
-        $(this).parents('fieldset').fadeOut(200, function() {
+        parent_fieldset.fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.all-brands').fadeIn();
             scroll_to_class($('form'), 20);
+            model_rdb.prop('checked', false);
+            parent_fieldset.find('.mbf-checked').removeClass('mbf-checked');
         });
     });
 
-    // Next
-    $('form .model-btn-next').on('click', function() {
+    // Huawei models next button
+    $('form .hmodel-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var next_step = true;
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
         var model = document.getElementById("sell-wiz").elements["model"];
         var model_value = model.value;
+
+        // Validation
+        $('.hmodel-btn-next').popover({
+            container: 'body',
+            content: 'Please select a model',
+            placement: 'top'
+        });
+
+        if (model_value == "") {
+            $('.hmodel-btn-next').popover('enable');
+            $('.hmodel-btn-next').popover('show');
+            $('.hmodel-btn-next').on('shown.bs.popover', function() {
+                var $pop = $(this);
+                setTimeout(function() {
+                    $pop.popover('hide');
+                }, 2000);
+                setTimeout(function() {
+                    $pop.popover();
+                }, 2200);
+            });
+
+            next_step = false;
+        } else {
+            $('.hmodel-btn-next').popover('disable');
+        }
 
         if (next_step) {
 
@@ -278,9 +277,48 @@ jQuery(document).ready(function() {
                     scroll_to_class($('form'), 20);
                 });
             }
+        }
+    });
+
+    // iPhone models next button
+
+    $('form .imodel-btn-next').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var next_step = true;
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
+        var model = document.getElementById("sell-wiz").elements["model"];
+        var model_value = model.value;
+
+        // Validation
+        $('.imodel-btn-next').popover({
+            container: 'body',
+            content: 'Please select a model',
+            placement: 'top'
+        });
+
+        if (model_value == "") {
+            $('.imodel-btn-next').popover('enable');
+            $('.imodel-btn-next').popover('show');
+            $('.imodel-btn-next').on('shown.bs.popover', function() {
+                var $pop = $(this);
+                setTimeout(function() {
+                    $pop.popover('hide');
+                }, 2000);
+                setTimeout(function() {
+                    $pop.popover();
+                }, 2200);
+            });
+
+            next_step = false;
+        } else {
+            $('.imodel-btn-next').popover('disable');
+        }
+
+        if (next_step) {
 
             // iPhone models
-            else if (model_value == 'iPhone X') {
+            if (model_value == 'iPhone X') {
                 parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
@@ -372,9 +410,48 @@ jQuery(document).ready(function() {
                     scroll_to_class($('form'), 20);
                 });
             }
+        }
+    });
+
+    // Samsung models next button
+
+    $('form .smodel-btn-next').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var next_step = true;
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
+        var model = document.getElementById("sell-wiz").elements["model"];
+        var model_value = model.value;
+
+        // Validation
+        $('.smodel-btn-next').popover({
+            container: 'body',
+            content: 'Please select a model',
+            placement: 'top'
+        });
+
+        if (model_value == "") {
+            $('.smodel-btn-next').popover('enable');
+            $('.smodel-btn-next').popover('show');
+            $('.smodel-btn-next').on('shown.bs.popover', function() {
+                var $pop = $(this);
+                setTimeout(function() {
+                    $pop.popover('hide');
+                }, 2000);
+                setTimeout(function() {
+                    $pop.popover();
+                }, 2200);
+            });
+
+            next_step = false;
+        } else {
+            $('.smodel-btn-next').popover('disable');
+        }
+
+        if (next_step) {
 
             // Samsung models
-            else if (model_value == 'Galaxy S9 Plus') {
+            if (model_value == 'Galaxy S9 Plus') {
                 parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
@@ -583,40 +660,64 @@ jQuery(document).ready(function() {
     // Previous
     // Huawei
     $('form .hc-btn-previous').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var cap_rdb = parent_fieldset.find('.cap-sell-rdb');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
-        $(this).parents('fieldset').fadeOut(200, function() {
+        $('.vcapacity-btn-next').popover('hide');
+        $('.vcapacity-btn-next').popover('disable');
+        $('.vcapacity-btn-next').remove();
+
+        parent_fieldset.fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.model-huawei').fadeIn();
             scroll_to_class($('form'), 20);
+            cap_rdb.prop('checked', false);
+            parent_fieldset.find('.cbf-checked').removeClass('cbf-checked');
         });
     });
 
     // iPhone
     $('form .ic-btn-previous').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var cap_rdb = parent_fieldset.find('.cap-sell-rdb');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+
+        $('.vcapacity-btn-next').popover('hide');
+        $('.vcapacity-btn-next').popover('disable');
+        $('.vcapacity-btn-next').remove();
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.model-iphone').fadeIn();
             scroll_to_class($('form'), 20);
+            cap_rdb.prop('checked', false);
+            parent_fieldset.find('.cbf-checked').removeClass('cbf-checked');
         });
     });
 
     // Samsung
     $('form .sc-btn-previous').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var cap_rdb = parent_fieldset.find('.cap-sell-rdb');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+
+        $('.vcapacity-btn-next').popover('hide');
+        $('.vcapacity-btn-next').popover('disable');
+        $('.vcapacity-btn-next').remove();
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.model-samsung').fadeIn();
             scroll_to_class($('form'), 20);
+            cap_rdb.prop('checked', false);
+            parent_fieldset.find('.cbf-checked').removeClass('cbf-checked');
         });
     });
 
@@ -625,9 +726,15 @@ jQuery(document).ready(function() {
         var parent_fieldset = $(this).parents('fieldset');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+        var active_cnext = parent_fieldset.find('.capacity-btn-next');
 
         parent_fieldset.find('input[type="radio"]').each(function() {
             if ($(this).prop("checked") == true) {
+
+                $('.vcapacity-btn-next').popover('hide');
+                $('.vcapacity-btn-next').popover('disable');
+                $('form .vcapacity-btn-next').remove();
+
                 parent_fieldset.addClass('selected_capacity');
                 parent_fieldset.fadeOut(200, function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
@@ -637,8 +744,27 @@ jQuery(document).ready(function() {
                 });
 
                 $('.phone-mdl-ws').append(document.getElementById("sell-wiz").elements["model"].value);
+            } else {
+                active_cnext.addClass('vcapacity-btn-next');
+                $('.vcapacity-btn-next').popover({
+                    container: 'body',
+                    content: 'Please select a capacity',
+                    placement: 'top',
+                    toggle: 'popover'
+                });
+                $('.vcapacity-btn-next').popover('enable');
+                $('.vcapacity-btn-next').popover('show');
+                $('.vcapacity-btn-next').on('shown.bs.popover', function() {
+                    var $pop = $(this);
+                    setTimeout(function() {
+                        $pop.popover('hide');
+                    }, 2000);
+                    setTimeout(function() {
+                        $pop.popover();
+                    }, 2200);
+                });
             }
-            // else request user to select capacity
+
         });
     });
 

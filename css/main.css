@@ -1,0 +1,9 @@
+.popover {
+    background: rgb(250, 178, 166);
+}
+
+.arrow::after,
+.bs-popover-top .arrow::after {
+    bottom: 1px;
+    border-top-color: rgb(250, 178, 166);
+}
