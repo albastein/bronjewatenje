@@ -664,10 +664,11 @@ jQuery(document).ready(function() {
         var cap_rdb = parent_fieldset.find('.cap-sell-rdb');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+        var active_cnext = parent_fieldset.find('.capacity-btn-next');
 
         $('.vcapacity-btn-next').popover('hide');
         $('.vcapacity-btn-next').popover('disable');
-        $('.vcapacity-btn-next').remove();
+        active_cnext.removeClass('vcapacity-btn-next');
 
         parent_fieldset.fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
@@ -685,10 +686,11 @@ jQuery(document).ready(function() {
         var cap_rdb = parent_fieldset.find('.cap-sell-rdb');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+        var active_cnext = parent_fieldset.find('.capacity-btn-next');
 
         $('.vcapacity-btn-next').popover('hide');
         $('.vcapacity-btn-next').popover('disable');
-        $('.vcapacity-btn-next').remove();
+        active_cnext.removeClass('vcapacity-btn-next');
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
@@ -706,10 +708,11 @@ jQuery(document).ready(function() {
         var cap_rdb = parent_fieldset.find('.cap-sell-rdb');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+        var active_cnext = parent_fieldset.find('.capacity-btn-next');
 
         $('.vcapacity-btn-next').popover('hide');
         $('.vcapacity-btn-next').popover('disable');
-        $('.vcapacity-btn-next').remove();
+        active_cnext.removeClass('vcapacity-btn-next');
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
@@ -733,7 +736,7 @@ jQuery(document).ready(function() {
 
                 $('.vcapacity-btn-next').popover('hide');
                 $('.vcapacity-btn-next').popover('disable');
-                $('form .vcapacity-btn-next').remove();
+                active_cnext.removeClass('vcapacity-btn-next');
 
                 parent_fieldset.addClass('selected_capacity');
                 parent_fieldset.fadeOut(200, function() {
@@ -902,8 +905,7 @@ jQuery(document).ready(function() {
 });
 
 /*
-
-*/
+ */
 
 
 
@@ -916,7 +918,6 @@ function validateRadio(radios) {
     }
     return false;
 }
-
 function validateForm() {
     if (validateRadio(document.forms["sell-wiz"]["brand"])) {
         return true;
