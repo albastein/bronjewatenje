@@ -737,48 +737,46 @@ jQuery(document).ready(function() {
         var capacity = document.getElementById("sell-wiz").elements["capacity"];
         var capacity_value = capacity.value;
 
-        parent_fieldset.find('input[type="radio"]').each(function() {
-            if (capacity_value == '') {
-                active_cnext.addClass('vcapacity-btn-next');
-                $('.vcapacity-btn-next').popover({
-                    container: 'body',
-                    content: 'Please select a capacity',
-                    placement: 'top',
-                    toggle: 'popover'
-                });
-                $('.vcapacity-btn-next').popover('enable');
-                $('.vcapacity-btn-next').popover('show');
-                $('.vcapacity-btn-next').on('shown.bs.popover', function() {
-                    var $pop = $(this);
-                    setTimeout(function() {
-                        $pop.popover('hide');
-                    }, 2000);
-                    setTimeout(function() {
-                        $pop.popover();
-                    }, 2200);
-                });
-            } else {
-                $('.vcapacity-btn-next').popover('hide');
-                $('.vcapacity-btn-next').popover('disable');
-                active_cnext.removeClass('vcapacity-btn-next');
+        if (capacity_value == '') {
+            active_cnext.addClass('vcapacity-btn-next');
+            $('.vcapacity-btn-next').popover({
+                container: 'body',
+                content: 'Please select a capacity',
+                placement: 'top',
+                toggle: 'popover'
+            });
+            $('.vcapacity-btn-next').popover('enable');
+            $('.vcapacity-btn-next').popover('show');
+            $('.vcapacity-btn-next').on('shown.bs.popover', function() {
+                var $pop = $(this);
+                setTimeout(function() {
+                    $pop.popover('hide');
+                }, 2000);
+                setTimeout(function() {
+                    $pop.popover();
+                }, 2200);
+            });
+        } else {
+            $('.vcapacity-btn-next').popover('hide');
+            $('.vcapacity-btn-next').popover('disable');
+            active_cnext.removeClass('vcapacity-btn-next');
 
-                parent_fieldset.addClass('selected_capacity');
-                parent_fieldset.fadeOut(200, function() {
-                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-                    bar_progress(progress_line, 'right');
-                    $(this).nextAll('.working_status').fadeIn();
-                    scroll_to_class($('form'), 20);
-                });
+            parent_fieldset.addClass('selected_capacity');
+            parent_fieldset.fadeOut(200, function() {
+                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                bar_progress(progress_line, 'right');
+                $(this).nextAll('.working_status').fadeIn();
+                scroll_to_class($('form'), 20);
+            });
 
-                $('.phone-mdl-ws').append(document.getElementById("sell-wiz").elements["model"].value);
-            }
-
-        });
+            $('.phone-mdl-ws').append(document.getElementById("sell-wiz").elements["model"].value);
+        }
     });
 
     /* previous step button in step 4 (Working Status) */
     // previous
     $('form .ws-btn-previous').on('click', function() {
+        var parent_fieldset = $('.selected_capacity');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
