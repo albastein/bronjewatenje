@@ -776,10 +776,14 @@ jQuery(document).ready(function() {
     /* previous step button in step 4 (Working Status) */
     // previous
     $('form .ws-btn-previous').on('click', function() {
-        var parent_fieldset = $('.selected_capacity');
+        var parent_fieldset = $(this).parents('fieldset');
+        var ws_rdb = parent_fieldset.find('.ws-sell-rdb');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
+        $('.newws-btn-next').popover('hide');
+        $('.newws-btn-next').popover('disable');
+        $('.ws-btn-next').removeClass('newws-btn-next');
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
@@ -787,6 +791,8 @@ jQuery(document).ready(function() {
             $(this).prevAll('.selected_capacity').fadeIn().removeClass('selected_capacity');
             scroll_to_class($('form'), 20);
             $('.phone-mdl-ws').replaceWith('<span class="phone-mdl-ws"></span>');
+            ws_rdb.prop('checked', false);
+            parent_fieldset.find('.wsbf-checked').removeClass('wsbf-checked');
         });
     });
 
@@ -796,20 +802,42 @@ jQuery(document).ready(function() {
         var parent_fieldset = $(this).parents('fieldset');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+        var wstatus = document.getElementById("sell-wiz").elements["working_status"];
+        var wstatus_value = wstatus.value;
 
-        parent_fieldset.find('input[type="radio"]').each(function() {
-            if ($(this).prop("checked") == true) {
-                parent_fieldset.fadeOut(200, function() {
-                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-                    bar_progress(progress_line, 'right');
-                    $(this).nextAll('.accessories').fadeIn();
-                    scroll_to_class($('form'), 20);
-                });
+        if (wstatus_value == '') {
+            $('.ws-btn-next').addClass('newws-btn-next');
+            $('.newws-btn-next').popover({
+                container: 'body',
+                content: 'Please select a capacity',
+                placement: 'top',
+                toggle: 'popover'
+            });
+            $('.newws-btn-next').popover('enable');
+            $('.newws-btn-next').popover('show');
+            $('.newws-btn-next').on('shown.bs.popover', function() {
+                var $pop = $(this);
+                setTimeout(function() {
+                    $pop.popover('hide');
+                }, 2000);
+                setTimeout(function() {
+                    $pop.popover();
+                }, 2200);
+            });
+        } else {
+            $('.newws-btn-next').popover('hide');
+            $('.newws-btn-next').popover('disable');
+            $('.ws-btn-next').removeClass('newws-btn-next');
 
-                $('.phone-mdl-accs').append(document.getElementById("sell-wiz").elements["model"].value);
-            }
-            // else request user to select capacity
-        });
+            parent_fieldset.fadeOut(200, function() {
+                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                bar_progress(progress_line, 'right');
+                $(this).nextAll('.accessories').fadeIn();
+                scroll_to_class($('form'), 20);
+            });
+
+            $('.phone-mdl-accs').append(document.getElementById("sell-wiz").elements["model"].value);
+        }
     });
 
 
