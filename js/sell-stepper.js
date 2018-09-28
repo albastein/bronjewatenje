@@ -681,7 +681,7 @@ jQuery(document).ready(function() {
         $('.vcapacity-btn-next').popover('disable');
         active_cnext.removeClass('vcapacity-btn-next');
 
-        $(this).parents('fieldset').fadeOut(200, function() {
+        parent_fieldset.fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.model-iphone').fadeIn();
@@ -703,7 +703,7 @@ jQuery(document).ready(function() {
         $('.vcapacity-btn-next').popover('disable');
         active_cnext.removeClass('vcapacity-btn-next');
 
-        $(this).parents('fieldset').fadeOut(200, function() {
+        parent_fieldset.fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.model-samsung').fadeIn();
@@ -949,13 +949,54 @@ jQuery(document).ready(function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
-
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
             $(this).prevAll('.details').fadeIn();
             scroll_to_class($('form'), 20);
         });
+    });
 
+    // add new phone
+    $('form .add-new-btn').on('click', function() {
+        /*
+        var current_active_step = $(this).parents('form').find('.form-wizard.active');
+        var progress_line = $(this).parents('form').find('.progress-line');
+
+        $('.brand-sell-rdb').each(function() {
+            $(this).prop('checked', false);
+        });
+        $('.image-radio-checked').removeClass('image-radio-checked');
+        $('.model-sell-rdb').each(function() {
+            $(this).prop('checked', false);
+        });
+        $('.mbf-checked').removeClass('mbf-checked');
+        $('.cap-sell-rdb').each(function() {
+            $(this).prop('checked', false);
+        });
+        $('.cbf-checked').removeClass('cbf-checked');
+        $('.ws-sell-rdb').each(function() {
+            $(this).prop('checked', false);
+        });
+        $('.wsbf-checked').removeClass('wsbf-checked');
+        $('.acc-sell-chb').each(function() {
+            $(this).prop('checked', false);
+        });
+        $('.acbf-checked').removeClass('acbf-checked');
+
+
+        $(this).parents('fieldset').fadeOut(200, function() {
+            current_active_step.removeClass('active').prevAll().removeClass('activated');
+            $('.first-step').addClass('active');
+            bar_progress(progress_line, 'left');
+            bar_progress(progress_line, 'left');
+            bar_progress(progress_line, 'left');
+            bar_progress(progress_line, 'left');
+            bar_progress(progress_line, 'left');
+            bar_progress(progress_line, 'left');
+            $(this).prevAll('.all-brands').fadeIn();
+            scroll_to_class($('form'), 20);
+        });
+        */
     });
 });
