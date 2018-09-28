@@ -29,16 +29,6 @@ jQuery(document).ready(function() {
 
     $('form fieldset:first').fadeIn('slow');
 
-    // Clear checked status of radio buttons on returning to previous step
-    /*
-    $('form .model-btn-previous').on('click', function() {
-            $('.model-sell-rdb').each().prop('checked', false);
-            $('.model-sell-rdb').each().parent().removeClass('mbf-checked');
-        });
-        */
-
-
-
     // Step 1 (brand) Next button
 
     $('form .brand-btn-next').on('click', function() {
@@ -652,11 +642,6 @@ jQuery(document).ready(function() {
                     scroll_to_class($('form'), 20);
                 });
             }
-            /*
-            // Remove checked status
-            $('.sell-rdb').prop('checked', false);
-            $('.sell-rdb').parent().removeClass('mbf-checked');
-            */
         }
     });
 
@@ -809,7 +794,7 @@ jQuery(document).ready(function() {
             $('.ws-btn-next').addClass('newws-btn-next');
             $('.newws-btn-next').popover({
                 container: 'body',
-                content: 'Please select a capacity',
+                content: 'Please select a condition',
                 placement: 'top',
                 toggle: 'popover'
             });
@@ -844,9 +829,14 @@ jQuery(document).ready(function() {
     /* previous step button in step 5 (Accessories) */
     // previous
     $('form .accs-btn-previous').on('click', function() {
+        var parent_fieldset = $(this).parents('fieldset');
+        var acc_chb = parent_fieldset.find('.acc-sell-chb');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
+        $('.newaccs-btn-next').popover('hide');
+        $('.newaccs-btn-next').popover('disable');
+        $('.ws-btn-next').removeClass('newaccs-btn-next');
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
@@ -854,6 +844,8 @@ jQuery(document).ready(function() {
             $(this).prevAll('.working_status').fadeIn();
             scroll_to_class($('form'), 20);
             $('.phone-mdl-accs').replaceWith('<span class="phone-mdl-accs"></span>');
+            acc_chb.prop('checked', false);
+            parent_fieldset.find('.acbf-checked').removeClass('acbf-checked');
         });
 
     });
@@ -863,20 +855,31 @@ jQuery(document).ready(function() {
         var parent_fieldset = $(this).parents('fieldset');
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
+        var fnbox = document.forms["sell-wiz"]["firstName"].value;
+        var lnbox = document.forms["sell-wiz"]["lastName"].value;;
+        var ebox = document.forms["sell-wiz"]["email"].value;
+        var pnbox = document.forms["sell-wiz"]["phoneNumber"].value;
 
-        parent_fieldset.find('input[type="checkbox"]').each(function() {
-            if ($(this).prop("checked") == true) {
-                parent_fieldset.fadeOut(200, function() {
-                    current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-                    bar_progress(progress_line, 'right');
-                    $(this).nextAll('.details').fadeIn();
-                    scroll_to_class($('form'), 20);
-                });
-            }
-            // else request user to select capacity
-        });
+        //No need for alert because accessories can be blank
+
+        if (fnbox !== "" && lnbox !== "" && ebox !== "" && pnbox !== "") {
+            parent_fieldset.fadeOut(200, function() {
+                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                $('.active').removeClass('active').addClass('activated').next().addClass('active');
+                bar_progress(progress_line, 'right');
+                bar_progress(progress_line, 'right');
+                $(this).nextAll('.value').fadeIn();
+                scroll_to_class($('form'), 20);
+            });
+        } else {
+            parent_fieldset.fadeOut(200, function() {
+                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                bar_progress(progress_line, 'right');
+                $(this).nextAll('.details').fadeIn();
+                scroll_to_class($('form'), 20);
+            });
+        };
     });
-
 
     /* previous step button in step 6 (Details) */
     // previous
@@ -884,6 +887,9 @@ jQuery(document).ready(function() {
         var current_active_step = $(this).parents('form').find('.form-wizard.active');
         var progress_line = $(this).parents('form').find('.progress-line');
 
+        $('.newdtls-btn-next').popover('hide');
+        $('.newdtls-btn-next').popover('disable');
+        $('.accs-btn-next').removeClass('newdtls-btn-next');
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
@@ -891,8 +897,8 @@ jQuery(document).ready(function() {
             $(this).prevAll('.accessories').fadeIn();
             scroll_to_class($('form'), 20);
         });
-
     });
+
     // next
     $('form .dtls-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
@@ -904,16 +910,35 @@ jQuery(document).ready(function() {
         var pnbox = document.forms["sell-wiz"]["phoneNumber"].value;
 
         if (fnbox !== "" && lnbox !== "" && ebox !== "" && pnbox !== "") {
+            $('.newdtls-btn-next').popover('hide');
+            $('.newdtls-btn-next').popover('disable');
+            $('.accs-btn-next').removeClass('newdtls-btn-next');
+
             parent_fieldset.fadeOut(200, function() {
                 current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                 bar_progress(progress_line, 'right');
                 $(this).nextAll('.value').fadeIn();
                 scroll_to_class($('form'), 20);
             });
-        }
-        // else request user to select capacity
-        else {
-            alert("Fill in all details");
+        } else {
+            $('.dtls-btn-next').addClass('newdtls-btn-next');
+            $('.newdtls-btn-next').popover({
+                container: 'body',
+                content: 'Fill all details',
+                placement: 'top',
+                toggle: 'popover'
+            });
+            $('.newdtls-btn-next').popover('enable');
+            $('.newdtls-btn-next').popover('show');
+            $('.newdtls-btn-next').on('shown.bs.popover', function() {
+                var $pop = $(this);
+                setTimeout(function() {
+                    $pop.popover('hide');
+                }, 2000);
+                setTimeout(function() {
+                    $pop.popover();
+                }, 2200);
+            });
         }
     });
 
@@ -934,27 +959,3 @@ jQuery(document).ready(function() {
 
     });
 });
-
-/*
- */
-
-
-
-// Validation 
-
-/*
-function validateRadio(radios) {
-    for (i = 0; i < radios.length; ++i) {
-        if (radios[i].checked) return true;
-    }
-    return false;
-}
-function validateForm() {
-    if (validateRadio(document.forms["sell-wiz"]["brand"])) {
-        return true;
-    } else {
-        alert('Please answer all questions');
-        return false;
-    }
-}
-*/
