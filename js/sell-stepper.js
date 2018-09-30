@@ -34,8 +34,8 @@ jQuery(document).ready(function() {
     $('form .brand-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var next_step = true;
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var brand = document.getElementById("sell-wiz").elements["brand"];
         var brand_value = brand.value;
 
@@ -93,8 +93,8 @@ jQuery(document).ready(function() {
         var parent_fieldset = $(this).parents('fieldset');
         var model_rdb = document.getElementById("sell-wiz").elements["model"];
         var brand_rdb = document.getElementById("sell-wiz").elements["brand"];
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
 
         /*
         var brand = document.getElementById("sell-wiz").elements["brand"];
@@ -118,8 +118,8 @@ jQuery(document).ready(function() {
     $('form .hmodel-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var next_step = true;
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var model = document.getElementById("sell-wiz").elements["model"];
         var model_value = model.value;
 
@@ -281,8 +281,8 @@ jQuery(document).ready(function() {
     $('form .imodel-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var next_step = true;
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var model = document.getElementById("sell-wiz").elements["model"];
         var model_value = model.value;
 
@@ -415,8 +415,8 @@ jQuery(document).ready(function() {
     $('form .smodel-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var next_step = true;
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var model = document.getElementById("sell-wiz").elements["model"];
         var model_value = model.value;
 
@@ -655,8 +655,8 @@ jQuery(document).ready(function() {
     $('form .hc-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var cap_rdb = document.getElementById("sell-wiz").elements["capacity"];
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var active_cnext = parent_fieldset.find('.capacity-btn-next');
 
         $('.vcapacity-btn-next').popover('hide');
@@ -677,8 +677,8 @@ jQuery(document).ready(function() {
     $('form .ic-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var cap_rdb = document.getElementById("sell-wiz").elements["capacity"];
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var active_cnext = parent_fieldset.find('.capacity-btn-next');
 
         $('.vcapacity-btn-next').popover('hide');
@@ -699,8 +699,8 @@ jQuery(document).ready(function() {
     $('form .sc-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var cap_rdb = document.getElementById("sell-wiz").elements["capacity"];
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var active_cnext = parent_fieldset.find('.capacity-btn-next');
 
         $('.vcapacity-btn-next').popover('hide');
@@ -720,8 +720,8 @@ jQuery(document).ready(function() {
     // next
     $('form .capacity-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var active_cnext = parent_fieldset.find('.capacity-btn-next');
         var capacity = document.getElementById("sell-wiz").elements["capacity"];
         var capacity_value = capacity.value;
@@ -767,8 +767,8 @@ jQuery(document).ready(function() {
     $('form .ws-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var ws_rdb = document.getElementById("sell-wiz").elements["working_status"];
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
 
         $('.newws-btn-next').popover('hide');
         $('.newws-btn-next').popover('disable');
@@ -790,8 +790,8 @@ jQuery(document).ready(function() {
     // next
     $('form .ws-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var wstatus = document.getElementById("sell-wiz").elements["working_status"];
         var wstatus_value = wstatus.value;
 
@@ -836,8 +836,8 @@ jQuery(document).ready(function() {
     $('form .accs-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
         var acc_chb = document.getElementById("sell-wiz").elements["accessories"];
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
 
         $('.newaccs-btn-next').popover('hide');
         $('.newaccs-btn-next').popover('disable');
@@ -858,12 +858,21 @@ jQuery(document).ready(function() {
     // next
     $('form .accs-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var fnbox = document.forms["sell-wiz"]["firstName"].value;
         var lnbox = document.forms["sell-wiz"]["lastName"].value;;
         var ebox = document.forms["sell-wiz"]["email"].value;
         var pnbox = document.forms["sell-wiz"]["phoneNumber"].value;
+        var fncookie = Cookies.get("firstName");
+        var lncookie = Cookies.get("lastName");
+        var ecookie = Cookies.get("email");
+        var pncookie = Cookies.get("phoneNumber");
+
+        if (fncookie) { fnbox = fncookie; }
+        if (lncookie) { lnbox = lncookie; }
+        if (ecookie) { ebox = ecookie; }
+        if (pncookie) { pnbox = pncookie; }
 
         //No need for alert because accessories can be blank
 
@@ -888,9 +897,10 @@ jQuery(document).ready(function() {
 
     /* previous step button in step 6 (Details) */
     // previous
-    function dtlspre() {
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+
+    $('form .dtls-btn-previous').on('click', function() {
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
 
         $('.newdtls-btn-next').popover('hide');
         $('.newdtls-btn-next').popover('disable');
@@ -902,20 +912,24 @@ jQuery(document).ready(function() {
             $(this).prevAll('.accessories').fadeIn();
             scroll_to_class($('form'), 20);
         });
-    }
-    $('form .dtls-btn-previous').on('click', dtlspre);
+    });
 
     // next
     $('form .dtls-btn-next').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
         var fnbox = document.forms["sell-wiz"]["firstName"].value;
         var lnbox = document.forms["sell-wiz"]["lastName"].value;;
         var ebox = document.forms["sell-wiz"]["email"].value;
         var pnbox = document.forms["sell-wiz"]["phoneNumber"].value;
 
         if (fnbox !== "" && lnbox !== "" && ebox !== "" && pnbox !== "") {
+            Cookies.set("firstName", fnbox, { expires: 1 });
+            Cookies.set("lastName", lnbox, { expires: 1 });
+            Cookies.set("email", ebox, { expires: 1 });
+            Cookies.set("phoneNumber", pnbox, { expires: 1 });
+
             $('.newdtls-btn-next').popover('hide');
             $('.newdtls-btn-next').popover('disable');
             $('.accs-btn-next').removeClass('newdtls-btn-next');
@@ -951,9 +965,10 @@ jQuery(document).ready(function() {
 
     /* previous step button in step 7 (Value)*/
     // previous
-    function valpre() {
-        var current_active_step = $(this).parents('form').find('.form-wizard.active');
-        var progress_line = $(this).parents('form').find('.progress-line');
+
+    $('form .val-btn-previous').on('click', function() {
+        var current_active_step = $('form').find('.form-wizard.active');
+        var progress_line = $('form').find('.progress-line');
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
@@ -961,17 +976,13 @@ jQuery(document).ready(function() {
             $(this).prevAll('.details').fadeIn();
             scroll_to_class($('form'), 20);
         });
-    }
-    $('form .val-btn-previous').on('click', valpre);
+    });
 
     // add new phone
     // The idea is  to call the btn-previous funtions sequentially until you are taken to brands step (step 1)
 
-
-    /*
-    Example
-    
-    $('form .add-new-btn').bind('click', valpre).bind('click', dtlspre);
-    */
+    $('form .add-new-btn').on('click', function() {
+        location.reload();
+    });
 
 });
