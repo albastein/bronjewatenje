@@ -39,19 +39,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a style="color:white" class="lead nav-link" href="index.html">Home</a>
+                        <a id="navi-link" class="lead nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a style="color:white" class="lead nav-link" href="sell.html">Sell</a>
+                        <a id="navi-link" class="lead nav-link" href="sell.html">Sell</a>
                     </li>
                     <li class="nav-item">
-                        <a style="color:white" class="lead nav-link" href="buy.html">Buy</a>
+                        <a id="navi-link" class="lead nav-link" href="buy.html">Buy</a>
                     </li>
                     <li class="avatar-menu nav-item">
-                        <a style="color:white" class="lead nav-link" href="#">Log in</a>
+                        <a id="navi-link" class="lead nav-link" href="#">Log in</a>
                     </li>
                     <li class="avatar-menu nav-item">
-                        <a style="color:white" class="lead nav-link" href="#">Register</a>
+                        <a id="navi-link" class="lead nav-link" href="#">Register</a>
                     </li>
                 </ul>
                 <div class="dropdown hidden-md-down">
@@ -64,11 +64,11 @@
             </div>
         </div>
     </nav>
-    <div style="background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));" class="sell-a-phone">
+    <div class="sell-a-phone">
         <br>
 
         <form id="sell-wiz" name="sell-wiz" class="sell-wizard" action="php/sellconn.php" method="get">
-            <h3 style="text-align:center;  color:#07454C;">Sell a phone</h3>
+            <h3 id="sell-phone-title">Sell a phone</h3>
             <div class="wizards wizards-sm smaller-text">
 
                 <div class="progressbar">
@@ -139,23 +139,23 @@
             </div>
 
             <fieldset class="all-brands">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">What is your phone's brand?</h4>
-                <div class="sell-brand-selector" style="position: relative; display:flex; flex-wrap:wrap; justify-content:center; margin-bottom: 50px;">
-                    <div class="nopad text-center float-left" style="display:inline-block; cursor: pointer;">
+                <h4 id="fset-titles" class="text-center">What is your phone's brand?</h4>
+                <div class="sell-brand-selector">
+                    <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
                             <img class="shadowed br-hua img-responsive" src="/images/brands/huawei.svg">
                             <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="huawei" />
                             <div><i class="d-none fa fa-check"></i></div>
                         </label>
                     </div>
-                    <div class="nopad text-center float-left" style="display:inline-block; cursor: pointer;">
+                    <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
                             <img class="shadowed br-hua img-responsive" src="/images/brands/apple.svg">
                             <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="iphone" />
                             <div><i class="d-none fa fa-check"></i></div>
                         </label>
                     </div>
-                    <div class="nopad text-center float-left" style="display:inline-block; cursor: pointer;">
+                    <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
                             <img class="shadowed br-hua img-responsive" src="/images/brands/samsung.svg">
                             <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="samsung" />
@@ -164,7 +164,7 @@
                     </div>
                 </div>
 
-                <div class="wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
 
                     <button id="brand-button" type="button" class="btn btn-next brand-btn-next" data-container="body" data-toggle="popover" data-placement="top" data-content="Oops! Please select a brand.">Next</button>
                 </div>
@@ -174,10 +174,10 @@
             <!-- Huawei -->
 
             <fieldset class="model-huawei">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Which Huawei model?</h4>
+                <h4 id="fset-titles" class="text-center">Which Huawei model?</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb model-sell-rdb" id="hm1" name="model" value="Huawei P20 Pro" />
                                 <label class="model-btn-labels" for="hm1">Huawei P20 Pro</label>
@@ -266,7 +266,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous model-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next hmodel-btn-next" data-toggle="popover">Next</button>
                 </div>
@@ -274,10 +274,10 @@
 
             <!-- iPhone Model Selection fieldset -->
             <fieldset class="model-iphone">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Which iPhone model?</h4>
+                <h4 id="fset-titles" class="text-center">Which iPhone model?</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb model-sell-rdb" id="im1" name="model" value="iPhone X" />
                                 <label class="model-btn-labels" for="im1">iPhone X</label>
@@ -346,7 +346,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous model-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next imodel-btn-next">Next</button>
                 </div>
@@ -354,10 +354,10 @@
 
             <!-- Samsung Model Selection fieldset -->
             <fieldset class="model-samsung">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Which Samsung model?</h4>
+                <h4 id="fset-titles" class="text-center">Which Samsung model?</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb model-sell-rdb" id="gm1" name="model" value="Galaxy S9 Plus" />
                                 <label class="model-btn-labels" for="gm1">Galaxy S9 Plus</label>
@@ -501,7 +501,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous model-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next smodel-btn-next">Next</button>
                 </div>
@@ -510,10 +510,10 @@
             <!-- Huawei Capacity fieldsets-->
 
             <fieldset class="capacity-hp20pro">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P20 Pro's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P20 Pro's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc1" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="hc1">128 GB</label>
@@ -522,16 +522,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp20">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P20's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P20's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc2" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="hc2">128 GB</label>
@@ -540,16 +540,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp20l">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P20 Lite's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P20 Lite's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc3" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc3">64 GB</label>
@@ -563,16 +563,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp10p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P10 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P10 Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc5" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="hc5">128 GB</label>
@@ -586,16 +586,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp10">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P10's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P10's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc7" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc7">64 GB</label>
@@ -609,16 +609,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp10l">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P10 Lite's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P10 Lite's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc9" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="hc9">32 GB</label>
@@ -627,16 +627,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp9p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P9 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P9 Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc10" name="capacity" value="64" />
                                 <label class="capacity-btn-labels-test" for="hc10">64 GB</label>
@@ -645,16 +645,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp9">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P9's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P9's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc11" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc11">64 GB</label>
@@ -668,16 +668,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp9l">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P9 Lite's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P9 Lite's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc13" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="hc13">16 GB</label>
@@ -686,16 +686,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp8">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P8's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc14" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc14">64 GB</label>
@@ -704,16 +704,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp8l17">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P8 Lite (2017)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P8 Lite (2017)'s memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc15" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="hc15">16 GB</label>
@@ -722,16 +722,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hp8l">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P8 Lite's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P8 Lite's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc16" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="hc16">16 GB</label>
@@ -740,16 +740,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hm10p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei Mate 10 Pro's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei Mate 10 Pro's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc17" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="hc17">128 GB</label>
@@ -763,16 +763,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hm10">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei Mate 10's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei Mate 10's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc19" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc19">64 GB</label>
@@ -781,16 +781,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hm9">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei Mate 9's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei Mate 9's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc20" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc20">64 GB</label>
@@ -799,16 +799,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hm8">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei Mate 8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei Mate 8's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc21" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc21">64 GB</label>
@@ -822,16 +822,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-hps">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Huawei P Smart's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Huawei P Smart's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="hc23" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc23">64 GB</label>
@@ -845,7 +845,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous hc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
@@ -854,10 +854,10 @@
             <!-- iPhone Capacity Fieldsets-->
 
             <fieldset class="capacity-ipx">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone X's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone X's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic1" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic1">256 GB</label>
@@ -871,16 +871,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip8p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 8 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 8 Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic3" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic3">256 GB</label>
@@ -894,16 +894,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip8">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 8's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic5" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic5">256 GB</label>
@@ -917,16 +917,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip7p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 7 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 7 Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic7" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic7">256 GB</label>
@@ -945,16 +945,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip7">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 7's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 7's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic10" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic10">256 GB</label>
@@ -973,16 +973,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip6sp">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 6s Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 6s Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic13" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic13">128 GB</label>
@@ -1006,16 +1006,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip6p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 6 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 6 Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic17" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic17">128 GB</label>
@@ -1034,16 +1034,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip6s">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 6S's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 6S's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic20" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic20">128 GB</label>
@@ -1067,16 +1067,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip6">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 6's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 6's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic24" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic24">128 GB</label>
@@ -1100,16 +1100,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip5s">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 5C's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 5C's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic28" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic28">64 GB</label>
@@ -1128,16 +1128,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip5c">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 5C's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 5C's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic31" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="ic31">32 GB</label>
@@ -1156,16 +1156,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ip5">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone 5's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone 5's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic34" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic34">64 GB</label>
@@ -1184,16 +1184,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ipse">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your iPhone SE's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your iPhone SE's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="ic37" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic37">128 GB</label>
@@ -1217,7 +1217,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ic-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
@@ -1225,10 +1225,10 @@
 
             <!-- Samsung Capacity fieldsets -->
             <fieldset class="capacity-gs9p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S9 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S9 Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc1" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="sc1">256 GB</label>
@@ -1247,16 +1247,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs9">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S9's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S9's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc4" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="sc4">256 GB</label>
@@ -1275,16 +1275,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs8p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S8 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S8 Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc7" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc7">64 GB</label>
@@ -1293,16 +1293,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs8">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S8's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc8" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc8">64 GB</label>
@@ -1311,16 +1311,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs7e">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S7 Edge's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S7 Edge's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc9" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc9">128 GB</label>
@@ -1339,16 +1339,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs7">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S7's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S7's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc12" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc12">64 GB</label>
@@ -1362,16 +1362,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs6ep">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S6 Edge Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S6 Edge Plus's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc14" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc14">64 GB</label>
@@ -1385,16 +1385,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs6e">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S6 Edge's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S6 Edge's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc16" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc16">128 GB</label>
@@ -1412,16 +1412,16 @@
                             </li>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs6">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S6's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S6's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc19" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc19">128 GB</label>
@@ -1440,16 +1440,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs5">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S5's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S5's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc22" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc22">32 GB</label>
@@ -1463,16 +1463,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gs4">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy S4's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy S4's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc24" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc24">64 GB</label>
@@ -1491,16 +1491,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gn8">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy Note 8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy Note 8's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc27" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="sc27">256 GB</label>
@@ -1519,16 +1519,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gn5">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy Note 5's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy Note 5's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc30" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc30">128 GB</label>
@@ -1547,16 +1547,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ge">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy Edge's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy Edge's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc33" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc33">32 GB</label>
@@ -1565,16 +1565,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gn4">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy Note 4's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy Note 4's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc34" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc34">32 GB</label>
@@ -1583,16 +1583,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gn3">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy Note 3's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy Note 3's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc35" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc35">64 GB</label>
@@ -1611,16 +1611,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga818">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A8 (2018)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A8 (2018)'s memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc38" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc38">64 GB</label>
@@ -1634,16 +1634,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga717">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A7 (2017)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A7 (2017)'s memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc40" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc40">32 GB</label>
@@ -1652,16 +1652,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga716">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A7 (2016)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A7 (2016)'s memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc41" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc41">16 GB</label>
@@ -1670,16 +1670,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga7">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A7's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A7's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc42" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc42">16 GB</label>
@@ -1688,16 +1688,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga517">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A5 (2017)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A5 (2017)'s memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc43" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc43">32 GB</label>
@@ -1706,16 +1706,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga516">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A5 (2016)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A5 (2016)'s memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc44" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc44">16 GB</label>
@@ -1724,16 +1724,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga5">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A5's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A5's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc45" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc45">16 GB</label>
@@ -1742,16 +1742,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga316">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A3 (2016)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A3 (2016)'s memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc46" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc46">16 GB</label>
@@ -1760,16 +1760,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-ga3">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy A3's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy A3's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc47" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc47">16 GB</label>
@@ -1778,16 +1778,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gj716">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy J7 (2016)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy J7 (2016)'s memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc48" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc48">16 GB</label>
@@ -1796,16 +1796,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gj7p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy J7 Prime's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy J7 Prime's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc49" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc49">32 GB</label>
@@ -1819,16 +1819,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="capacity-gj5p">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please select your Galaxy J5 Prime's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Please select your Galaxy J5 Prime's memory capacity</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-m row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb cap-sell-rdb" id="sc51" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc51">16 GB</label>
@@ -1837,7 +1837,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous sc-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next capacity-btn-next">Next</button>
                 </div>
@@ -1846,15 +1846,15 @@
             <!-- Working Status fieldset-->
 
             <fieldset class="working_status ">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">What is your <span class="phone-mdl-ws"></span>'s Condition?</h4>
+                <h4 id="fset-titles" class="text-center">What is your <span class="phone-mdl-ws"></span>'s Condition?</h4>
                 <div class="container">
                     <div>
-                        <ul class="h-ws row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul class="h-ws row smlr-uls">
                             <li class="wsbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="radio" class="sell-rdb ws-sell-rdb" id="ws1" name="working_status" value="Excellent" />
                                 <label class="ws-btn-labels" for="ws11">
                                     <p id="wslbl">Excellent</p>                                   
-                                    <p class="ws-description" style="color: rgb(141, 159, 161)">Good as new. Has no dents or scratches.</p>
+                                    <p class="ws-description">Good as new. Has no dents or scratches.</p>
                                 </label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1862,7 +1862,7 @@
                                 <input type="radio" class="sell-rdb ws-sell-rdb" id="ws2" name="working_status" value="Good" />
                                 <label class="ws-btn-labels" for="ws2">
                                     <p id="wslbl">Good</p>
-                                    <p class="ws-description" style="color: rgb(141, 159, 161)">Only has light scratches and works perfectly.</p>
+                                    <p class="ws-description">Only has light scratches and works perfectly.</p>
                                 </label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1870,14 +1870,14 @@
                                 <input type="radio" class="sell-rdb ws-sell-rdb" id="ws3" name="working_status" value="Damaged" />
                                 <label class="ws-btn-labels" for="ws3">
                                     <p id="wslbl">Damaged</p>
-                                    <p class="ws-description" style="color: rgb(141, 159, 161)">Switches on and works but screen is cracked.</p>
+                                    <p class="ws-description">Switches on and works but screen is cracked.</p>
                                 </label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous ws-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next ws-btn-next">Next</button>
                 </div>
@@ -1885,11 +1885,11 @@
 
             <!-- Accessories fieldset-->
             <fieldset class="accessories ">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">What original accessories are included with your <span class="phone-mdl-accs"></span>?</h4>
+                <h4 id="fset-titles" class="text-center">What original accessories are included with your <span class="phone-mdl-accs"></span>?</h4>
                 <div class="container">
                     <div>
                         <p class="lead text-center"><i>*Skip if your <span class="phone-mdl-accs"></span> has none</i></p>
-                        <ul class="h-ac row" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                        <ul class="h-ac row smlr-uls">
                             <li class="acbf text-center col-sm-6 col-md-6 col-lg-3">
                                 <input type="checkbox" class="sell-chb acc-sell-chb" id="ac1" name="accessories" value="Wall Charger" />
                                 <label class="ws-btn-labels" for="ac1">Wall Charger</label>
@@ -1903,14 +1903,14 @@
                         </ul>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" class="btn btn-previous accs-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next accs-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="details ">
-                <h4 class="text-center" style="margin-top: 30px; margin-bottom: 30px; color:#07454C;">Welcome back</h4>
-                <h5 class="text-center" style="margin-top: 30px; margin-bottom: 60px; color:#07454C;">Please enter your contact details</h5>
+                <h4 id="wlcm-ttl" class="text-center">Welcome back</h4>
+                <h5 id="fset-titles" class="text-center">Please enter your contact details</h5>
                 <div class="container dtin">
                     <input type="text" class="dt-fname" name="firstName" placeholder="first name" required>
                     <div>
@@ -1929,14 +1929,14 @@
                         <p class="pnum-help">Please enter your phone number e.g. 0733 123 456.</p>
                     </div>
                 </div>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" id="dtls-prev" class="btn btn-previous dtls-btn-previous">Previous</button>
                     <button type="button" class="btn btn-next dtls-btn-next">Next</button>
                 </div>
             </fieldset>
             <fieldset class="value ">
                 <?php echo <p>this is a test</p>
-                <div class="container wizard-buttons" style="margin-bottom: 20px; position: relative; display:flex; flex-wrap:wrap; justify-content:center;">
+                <div class="container wizard-buttons">
                     <button type="button" id="val-prev" class="btn btn-previous val-btn-previous">Change Contact</button>
                     <button type="button" class="btn btn-outline-primary add-new-btn">Add Another Phone</button>
                 </div>
@@ -1946,26 +1946,26 @@
         </form>
     </div>
 
-    <div style="margin-bottom: -40px; " id="d-wrapper ">
+    <div id="d-wrapper ">
         <div class="futa clearfix">
-            <a href="# " style="margin:20px; color: #fff; text-decoration: none; " align="center ">
+            <a id="FAQ" href="# " align="center ">
                 <h6>FAQ</h6>
             </a>
-            <div style="color: #fff; margin: 0 0 40px 0; " align="center " class="footer-social ">
-                <a href="# " style="margin: 20px "><img src="/images/icons/facebook-white.svg " width="30px " height="30px "></a>
-                <a href="# " style="margin: 20px "><img src="/images/icons/twitter-white.svg " width="30px " height="30px "></a>
-                <a href="# " style="margin: 20px "><img src="/images/icons/instagram-white.svg " width="30px " height="30px "></a>
+            <div align="center " class="footer-social ">
+                <a id="smedia-icos" href="# "><img src="/images/icons/facebook-white.svg " width="30px " height="30px "></a>
+                <a id="smedia-icos" href="# "><img src="/images/icons/twitter-white.svg " width="30px " height="30px "></a>
+                <a id="smedia-icos" href="# "><img src="/images/icons/instagram-white.svg " width="30px " height="30px "></a>
             </div>
-            <div style="margin: 0 0 20px 0 " align="center " class="footer-payments ">
-                <a style="margin:0 20px; "><img src="/images/icons/visa.png " width="50px " height="15px "></a>
-                <a style="margin:0 20px; "><img src="/images/icons/mastercard.png " width="70px " height="40px "></a>
-                <a style="margin:0 20px; "><img src="/images/icons/paypal.png " width="70px " height="20px "></a>
-                <a style="margin:0 20px; "><img src="/images/icons/mpesa.png " width="80px " height="35px "></a>
-                <a style="margin:0 20px; "><img src="/images/icons/airtel-money.png " width="50px " height="30px "></a>
+            <div align="center " class="footer-payments ">
+                <a id="pymt-icos"><img src="/images/icons/visa.png " width="50px " height="15px "></a>
+                <a id="pymt-icos"><img src="/images/icons/mastercard.png " width="70px " height="40px "></a>
+                <a id="pymt-icos"><img src="/images/icons/paypal.png " width="70px " height="20px "></a>
+                <a id="pymt-icos"><img src="/images/icons/mpesa.png " width="80px " height="35px "></a>
+                <a id="pymt-icos"><img src="/images/icons/airtel-money.png " width="50px " height="30px "></a>
             </div>
             <hr class="my-1 ">
             <div align="center ">
-                <p class="lead " style="font-size: 16px; color: #fff; margin-bottom: -20px; padding-bottom: 20px; ">Rununua 2018</p>
+                <p class="lead copyrgt">Rununua 2018</p>
             </div>
 
         </div>

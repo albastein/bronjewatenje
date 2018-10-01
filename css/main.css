@@ -1,3 +1,69 @@
+#navi-link {
+    color: white;
+}
+
+.sell-a-phone {
+    background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));
+}
+
+#fset-titles {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: #07454C;
+}
+
+#wlcm-ttl {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #07454C;
+}
+
+.sell-brand-selector {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#nopad {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.wizard-buttons {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#btn-uls {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#sell-phone-title {
+    text-align: center;
+    color: #07454C;
+}
+
+.smlr-uls {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ws-description {
+    color: rgb(141, 159, 161);
+}
+
 .popover {
     background: rgb(250, 178, 166);
 }
@@ -6,4 +72,38 @@
 .bs-popover-top .arrow::after {
     bottom: 1px;
     border-top-color: rgb(250, 178, 166);
+}
+
+#d-wrapper {
+    margin-bottom: -40px;
+}
+
+#FAQ {
+    margin: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-payments {
+    margin: 0 0 20px 0;
+}
+
+#smedia-icos {
+    margin: 20px;
+}
+
+#pymt-icos {
+    margin: 0 20px;
+}
+
+.footer-social {
+    color: #fff;
+    margin: 0 0 40px 0;
+}
+
+.copyrgt {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: -20px;
+    padding-bottom: 20px;
 }
