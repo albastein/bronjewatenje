@@ -2,85 +2,6 @@
     color: white;
 }
 
-#bs-ttl {
-    color: #07454C;
-    padding-right: 20px;
-    top: 10%;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-}
-
-.slq {
-    position: absolute;
-    text-align: center;
-    top: 20%;
-    width: 100%;
-    color: #07454C;
-}
-
-.bls-btn {
-    bottom: 5%;
-    left: 15px;
-    position: absolute;
-}
-
-.blb-btn {
-    bottom: 5%;
-    left: 80px;
-    position: absolute;
-}
-
-.banner-sm {
-    text-align: center;
-    background: linear-gradient( #07454C, rgb(255, 255, 255));
-}
-
-#hiw-txt {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #07454C;
-}
-
-#hiw-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-}
-
-#hiwsm {
-    background: linear-gradient( rgb(255, 255, 255), rgb(212, 231, 233), rgb(255, 255, 255));
-}
-
-#botw {
-    text-align: center;
-    color: #07454C;
-    margin-bottom: 50px;
-}
-
-.weekly-offers {
-    padding: 10px;
-    background: linear-gradient( rgb(255, 255, 255), rgb(219, 238, 235), rgb(255, 255, 255));
-}
-
-.owl-marg {
-    left: 25px;
-}
-
-#txt-col {
-    text-align: center;
-    color: #07454C;
-}
-
-.how-it-works-lg {
-    background: linear-gradient(rgb(255, 255, 255), rgb(187, 235, 228), rgb(255, 255, 255));
-}
-
-.wht-txt {
-    color: #fff;
-}
-
 .sell-a-phone {
     background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));
 }
@@ -103,11 +24,6 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 50px;
-}
-
-#lrg-bnr {
-    max-width: 100%;
-    position: relative;
 }
 
 #nopad {

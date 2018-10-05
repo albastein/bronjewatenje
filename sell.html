@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
 
 <head>
@@ -9,7 +11,7 @@
     <link rel="shortcut icon" type="image/ico" href="images/title-logo.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/avatar.css">
     <link rel="stylesheet" href="css/sell-progress.css">
@@ -27,8 +29,8 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="pull-left" href="index.html">
-                    <img class="big-logo img-responsive" src="/images/rununua-logo.svg" width="130px">
-                    <img class="small-logo img-responsive" src="/images/rununua-logo.svg" width="100px">
+                    <img class="big-logo img-responsive" src="images/rununua-logo.svg" width="130px">
+                    <img class="small-logo img-responsive" src="images/rununua-logo.svg" width="100px">
                 </a>
             </div>
 
@@ -55,7 +57,7 @@
                     </li>
                 </ul>
                 <div class="dropdown hidden-md-down">
-                    <a class="avatar pull-right btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/avatar.png" /></a>
+                    <a class="avatar pull-right btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/icons/avatar.png" /></a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" href="#">Log in</a>
                         <a class="dropdown-item" href="#">Register</a>
@@ -67,7 +69,7 @@
     <div class="sell-a-phone">
         <br>
 
-        <form id="sell-wiz" name="sell-wiz" class="sell-wizard" action="php/sellconn.php" method="get">
+        <form id="sell-wiz" name="sell-wiz" class="sell-wizard" action="" method="GET">
             <h3 id="sell-phone-title">Sell a phone</h3>
             <div class="wizards wizards-sm smaller-text">
 
@@ -143,21 +145,21 @@
                 <div class="sell-brand-selector">
                     <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
-                            <img class="shadowed br-hua img-responsive" src="/images/brands/huawei.svg">
+                            <img class="shadowed br-hua img-responsive" src="images/brands/huawei.svg">
                             <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="huawei" />
                             <div><i class="d-none fa fa-check"></i></div>
                         </label>
                     </div>
                     <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
-                            <img class="shadowed br-hua img-responsive" src="/images/brands/apple.svg">
+                            <img class="shadowed br-hua img-responsive" src="images/brands/apple.svg">
                             <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="iphone" />
                             <div><i class="d-none fa fa-check"></i></div>
                         </label>
                     </div>
                     <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
-                            <img class="shadowed br-hua img-responsive" src="/images/brands/samsung.svg">
+                            <img class="shadowed br-hua img-responsive" src="images/brands/samsung.svg">
                             <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="samsung" />
                             <div><i class="d-none fa fa-check"></i></div>
                         </label>
@@ -1935,13 +1937,14 @@
                 </div>
             </fieldset>
             <fieldset class="value ">
-                <?php echo <p>this is a test</p>
+
+                <div id="slvalue"></div>
+
                 <div class="container wizard-buttons">
                     <button type="button" id="val-prev" class="btn btn-previous val-btn-previous">Change Contact</button>
                     <button type="button" class="btn btn-outline-primary add-new-btn">Add Another Phone</button>
                 </div>
             </fieldset>
-
 
         </form>
     </div>
@@ -1952,16 +1955,16 @@
                 <h6>FAQ</h6>
             </a>
             <div align="center " class="footer-social ">
-                <a id="smedia-icos" href="# "><img src="/images/icons/facebook-white.svg " width="30px " height="30px "></a>
-                <a id="smedia-icos" href="# "><img src="/images/icons/twitter-white.svg " width="30px " height="30px "></a>
-                <a id="smedia-icos" href="# "><img src="/images/icons/instagram-white.svg " width="30px " height="30px "></a>
+                <a id="smedia-icos" href="# "><img src="images/icons/facebook-white.svg " width="30px " height="30px "></a>
+                <a id="smedia-icos" href="# "><img src="images/icons/twitter-white.svg " width="30px " height="30px "></a>
+                <a id="smedia-icos" href="# "><img src="images/icons/instagram-white.svg " width="30px " height="30px "></a>
             </div>
             <div align="center " class="footer-payments ">
-                <a id="pymt-icos"><img src="/images/icons/visa.png " width="50px " height="15px "></a>
-                <a id="pymt-icos"><img src="/images/icons/mastercard.png " width="70px " height="40px "></a>
-                <a id="pymt-icos"><img src="/images/icons/paypal.png " width="70px " height="20px "></a>
-                <a id="pymt-icos"><img src="/images/icons/mpesa.png " width="80px " height="35px "></a>
-                <a id="pymt-icos"><img src="/images/icons/airtel-money.png " width="50px " height="30px "></a>
+                <a id="pymt-icos"><img src="images/icons/visa.png " width="50px " height="15px "></a>
+                <a id="pymt-icos"><img src="images/icons/mastercard.png " width="70px " height="40px "></a>
+                <a id="pymt-icos"><img src="images/icons/paypal.png " width="70px " height="20px "></a>
+                <a id="pymt-icos"><img src="images/icons/mpesa.png " width="80px " height="35px "></a>
+                <a id="pymt-icos"><img src="images/icons/airtel-money.png " width="50px " height="30px "></a>
             </div>
             <hr class="my-1 ">
             <div align="center ">
@@ -1992,6 +1995,16 @@
     <script src="js/selectors.js "></script>
     <script src="js/select-btns.js"></script>
     <script src="js/details.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".accs-btn-next").click(function() {
+                brandVal = document.getElementById("sell-wiz").elements["brand"].value;
+                $("#slvalue").load("load-value.php", {
+                    'brandValue': brandVal
+                });
+            });
+        });
+    </script>
 </body>
 
 </html
