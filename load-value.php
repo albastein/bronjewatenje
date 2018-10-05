@@ -2,8 +2,24 @@
     include 'dbconn.php';
 
     $brand_val = $_POST['brandValue'];
+    $model_val = $_POST['modelValue'];
+    $capac_val = $_POST['capacityValue'];
+    $state_val = $_POST['statusValue'];
+    $acces_val = $_POST['accessoryValue'];
 
-    $sql = 'SELECT price FROM '.$brand_val.' WHERE model = "Huawei P Smart" && capacity = 32 && working_status = "Good" && accessories = "USB Cable"';
+    echo $brand_val;
+    echo $model_val;
+    echo $capac_val;
+    echo $state_val;
+    echo $acces_val;
+
+    $sql = "SELECT price
+            FROM ".$brand_val."
+            WHERE 
+            model = '". $model_val. "' AND 
+            capacity = '". $capac_val. "' AND 
+            working_status = '". $state_val. "' AND 
+            accessories = '". $acces_val. "'";
 
     $result = mysqli_query($dbconn, $sql);
 

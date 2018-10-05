@@ -1998,13 +1998,39 @@
     <script>
         $(document).ready(function() {
             $(".accs-btn-next").click(function() {
-                brandVal = document.getElementById("sell-wiz").elements["brand"].value;
+                let brandVal = document.getElementById("sell-wiz").elements["brand"].value;
+                let modelVal = document.getElementById("sell-wiz").elements["model"].value;
+                let capacityVal = document.getElementById("sell-wiz").elements["capacity"].value;
+                let statusVal = document.getElementById("sell-wiz").elements["working_status"].value;
+                let achb1 = document.getElementById("ac1").checked;
+                let achb2 = document.getElementById("ac2").checked;
+                if (achb1 && achb2) {
+                    accessoryVal = "Both";
+                } else if (achb1 == false && achb2 == false) {
+                    accessoryVal = "";
+                } else {
+                    let checkedValue = null;
+                    let inputElements = document.getElementById("sell-wiz").elements["accessories"];
+                    for (var i = 0; inputElements[i]; ++i) {
+                        if (inputElements[i].checked) {
+                            checkedValue = inputElements[i].value;
+
+                            accessoryVal = checkedValue;
+                            break;
+                        }
+                    }
+                }
+
                 $("#slvalue").load("load-value.php", {
-                    'brandValue': brandVal
+                    'brandValue': brandVal,
+                    'modelValue': modelVal,
+                    'capacityValue': capacityVal,
+                    'statusValue': statusVal,
+                    'accessoryValue': accessoryVal
                 });
             });
         });
     </script>
 </body>
 
-</html
+</html>
