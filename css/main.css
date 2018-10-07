@@ -6,9 +6,45 @@
     background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));
 }
 
+.valuation {
+    margin-top: 40px;
+}
+
 #fset-titles {
     margin-top: 30px;
     margin-bottom: 60px;
+    color: #07454C;
+}
+
+#slvalue {
+    display: none;
+}
+
+.collection {
+    color: rgb(158, 34, 34);
+}
+
+.deduct {
+    font-size: 20px;
+    font-weight: bold;
+    color: #07454C;
+}
+
+.our-fees {
+    color: rgb(158, 34, 34);
+}
+
+.cust-pay {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(46, 148, 71);
+}
+
+.customer-pay {
+    margin-top: 25px;
+    margin-bottom: -15px;
+    font-size: 30px;
+    font-weight: bold;
     color: #07454C;
 }
 
@@ -72,6 +108,59 @@
 .bs-popover-top .arrow::after {
     bottom: 1px;
     border-top-color: rgb(250, 178, 166);
+}
+
+.sell-button {
+    margin-bottom: 25px;
+}
+
+.btn-sellval {
+    text-align: center;
+}
+
+.btn-sellval:before {
+    border-radius: 100px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 110px;
+    width: 110px;
+    margin-left: -57px;
+    margin-top: -57px;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms;
+}
+
+.btn-sellval:hover:before {
+    transform: scale(1.05);
+}
+
+.btn-sellval.btn-circle {
+    background: #07454C;
+    border: none;
+    border-radius: 900px;
+    color: #e4ecfa;
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    margin: auto;
+    margin-top: 25px;
+    transition: 0.5s;
+}
+
+.btn-sellval.btn-circle:hover {
+    background: rgb(49, 143, 153);
+    padding: -2px;
+}
+
+.btn-sellval:focus {
+    outline: none;
 }
 
 #d-wrapper {

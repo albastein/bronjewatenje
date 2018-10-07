@@ -905,6 +905,8 @@ jQuery(document).ready(function() {
         $('.newdtls-btn-next').popover('hide');
         $('.newdtls-btn-next').popover('disable');
         $('.accs-btn-next').removeClass('newdtls-btn-next');
+        $('.cust-value').remove();
+        $('.fee-value').remove();
 
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
@@ -961,7 +963,6 @@ jQuery(document).ready(function() {
             });
         }
     });
-
 
     /* previous step button in step 7 (Value)*/
     // previous

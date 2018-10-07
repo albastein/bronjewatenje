@@ -1936,10 +1936,26 @@
                     <button type="button" class="btn btn-next dtls-btn-next">Next</button>
                 </div>
             </fieldset>
-            <fieldset class="value ">
+            <fieldset onload="counter()" class="value ">
+                <h4 id="fset-titles" class="text-center">To sell your <span class="phone-mdl-accs"></span>:</h4>
+                <span id="slvalue"></span>
+                <div class="valuation">
+                    <p class="deduct text-center">Collection cost:
+                        <span class="collection">Ksh. 650</span>
+                    </p>
+                    <p class="deduct text-center">Rununua fee:
+                        <span class="our-fees">Ksh. </span>
+                    </p>
+                    <p class="text-center"><span class="customer-pay">You get:</span>
+                        <p class="cust-pay text-center">Ksh.
+                            <span id="cust-pay"></span>
+                        </p>
+                    </p>
+                </div>
 
-                <div id="slvalue"></div>
-
+                <div class="sell-button">
+                    <button type="button" class="btn-sellval btn-circle">Sell  <img src="images/icons/sell icon.svg" width="20px"></button>
+                </div>
                 <div class="container wizard-buttons">
                     <button type="button" id="val-prev" class="btn btn-previous val-btn-previous">Change Contact</button>
                     <button type="button" class="btn btn-outline-primary add-new-btn">Add Another Phone</button>
@@ -2027,6 +2043,34 @@
                     'capacityValue': capacityVal,
                     'statusValue': statusVal,
                     'accessoryValue': accessoryVal
+                }, function() {
+                    $(".fee-value").appendTo(".our-fees");
+                    $(".cust-value").appendTo(".cust-pay");
+
+                    $(".fee-value").prop('Counter', 0).animate({
+                        Counter: $(".fee-value").text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function(now) {
+                            $(".fee-value").text(Math.ceil(now));
+                        }
+                    });
+                    $(".cust-value").prop('Counter', 0).animate({
+                        Counter: $(".cust-value").text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function(now) {
+                            $(".cust-value").text(Math.ceil(now));
+                        }
+                    });
+
+                    $(".cust-value").css({
+                        "font-size": "50px",
+                        "font-weight": "bold",
+                        "color": "rgb(46, 148, 71)"
+                    });
                 });
             });
         });
