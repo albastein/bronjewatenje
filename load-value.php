@@ -23,8 +23,18 @@
         $sellval = $realval - 650;
         $custval = $sellval * 0.82;
         $feeval = $sellval * 0.18;
-        print '<span class="cust-value">' . max((int)$custval, 0) . '</span>';
-        print '</br>';
-        print '<span class="fee-value">' . max((int)$feeval, 0) . '</span>';
+        if ($feeval >= 500) {
+            print '<span class="cust-value">' . max((int)$custval, 0) . '</span>';
+            print '</br>';
+            print '<span class="fee-value">' . max((int)$feeval, 0) . '</span>';
+        } else if ($feeval > 500) {
+            print '<span class="cust-value">0</span>';
+            print '</br>';
+            print '<span class="fee-value">0</span>';
+        } else {
+            print '<span class="cust-value"></span>';
+            print '</br>';
+            print '<span class="fee-value"></span>';
+        }
     }
 ?>
