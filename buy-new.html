@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
-
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sell a phone</title>
+    <title>Buy phones</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/ico" href="images/title-logo.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
@@ -14,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/avatar.css">
-    <link rel="stylesheet" href="css/sell-progress.css">
+    <link rel="stylesheet" href="css/buy-progress.css">
     <link rel="stylesheet" href="css/selectors.css">
     <link rel="stylesheet" href="css/model-btns.css">
     <link rel="stylesheet" href="css/capacity-btns.css">
@@ -41,10 +39,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a id="navi-link" class="lead nav-link" href="index.html">Home</a>
+                        <a style="color:white" class="lead nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="navi-link" class="lead nav-link" href="sell.html">Sell</a>
+                        <a style="color:white" class="lead nav-link" href="sell.html">Sell</a>
                     </li>
                     <li class="nav-item">
                         <a id="navi-link" class="lead nav-link" href="buy-new.html">Buy new</a>
@@ -53,10 +51,10 @@
                         <a id="navi-link" class="lead nav-link" href="buy-used.html">Buy used</a>
                     </li>
                     <li class="avatar-menu nav-item">
-                        <a id="navi-link" class="lead nav-link" href="#">Log in</a>
+                        <a style="color:white" class="lead nav-link" href="#">Log in</a>
                     </li>
                     <li class="avatar-menu nav-item">
-                        <a id="navi-link" class="lead nav-link" href="#">Register</a>
+                        <a style="color:white" class="lead nav-link" href="#">Register</a>
                     </li>
                 </ul>
                 <div class="dropdown hidden-md-down">
@@ -69,15 +67,14 @@
             </div>
         </div>
     </nav>
-    <div class="sell-a-phone">
+    <div style="background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));" class="buy-a-phone">
         <br>
-
-        <form id="sell-wiz" name="sell-wiz" class="sell-wizard">
-            <h3 id="sell-phone-title">Sell a phone</h3>
+        <form id="buy-wiz" name="buy-wiz" class="buy-wizard">
+            <h3 id="buy-phone-title">Buy a new phone</h3>
             <div class="wizards wizards-sm smaller-text">
 
                 <div class="progressbar">
-                    <div class="progress-line" data-now-value="7" data-number-of-steps="7" style="width: 7%;"></div>
+                    <div class="progress-line" data-now-value="10" data-number-of-steps="5" style="width: 10%"></div>
                 </div>
                 <div class="form-wizard active first-step">
                     <div class="wizard-icon"><i class="fa fa-star"></i></div>
@@ -93,14 +90,6 @@
                 </div>
                 <div class="form-wizard">
                     <div class="wizard-icon"><i class="fa fa-star"></i></div>
-                    <p>Status</p>
-                </div>
-                <div class="form-wizard">
-                    <div class="wizard-icon"><i class="fa fa-star"></i></div>
-                    <p>Condition</p>
-                </div>
-                <div class="form-wizard">
-                    <div class="wizard-icon"><i class="fa fa-star"></i></div>
                     <p>Contact</p>
                 </div>
                 <div class="form-wizard">
@@ -111,7 +100,7 @@
 
             <div class="wizards wizards-lg">
                 <div class="progressbar">
-                    <div class="progress-line" data-now-value="27" data-number-of-steps="7" style="width: 7%;"></div>
+                    <div class="progress-line" data-now-value="10" data-number-of-steps="5" style="width: 10%;"></div>
                 </div>
                 <div class="form-wizard active first-step">
                     <div class="wizard-icon"><i class="fa fa-star"></i></div>
@@ -127,14 +116,6 @@
                 </div>
                 <div class="form-wizard">
                     <div class="wizard-icon"><i class="fa fa-star"></i></div>
-                    <p class="font-weight-bold">Condition</p>
-                </div>
-                <div class="form-wizard">
-                    <div class="wizard-icon"><i class="fa fa-star"></i></div>
-                    <p class="font-weight-bold">Accessories</p>
-                </div>
-                <div class="form-wizard">
-                    <div class="wizard-icon"><i class="fa fa-star"></i></div>
                     <p class="font-weight-bold">Contact</p>
                 </div>
                 <div class="form-wizard">
@@ -145,27 +126,27 @@
 
             <fieldset class="all-brands">
                 <h4 id="fset-titles" class="text-center">What is your phone's brand?</h4>
-                <div class="sell-brand-selector">
+                <div class="buy-brand-selector">
                     <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
-                            <img class="shadowed br-hua img-responsive" src="images/brands/huawei.svg">
-                            <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="huawei" />
-                            <div><i class="d-none fa fa-check"></i></div>
-                        </label>
+                                <img class="shadowed br-hua img-responsive" src="images/brands/huawei.svg">
+                                <input type="radio" class="buy-rdb brand-buy-rdb" name="brand" value="huawei" />
+                                <div><i class="d-none fa fa-check"></i></div>
+                            </label>
                     </div>
                     <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
-                            <img class="shadowed br-hua img-responsive" src="images/brands/apple.svg">
-                            <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="iphone" />
-                            <div><i class="d-none fa fa-check"></i></div>
-                        </label>
+                                <img class="shadowed br-hua img-responsive" src="images/brands/apple.svg">
+                                <input type="radio" class="buy-rdb brand-buy-rdb" name="brand" value="iphone" />
+                                <div><i class="d-none fa fa-check"></i></div>
+                            </label>
                     </div>
                     <div id="nopad" class="nopad text-center float-left">
                         <label class="image-radio">
-                            <img class="shadowed br-hua img-responsive" src="images/brands/samsung.svg">
-                            <input type="radio" class="sell-rdb brand-sell-rdb" name="brand" value="samsung" />
-                            <div><i class="d-none fa fa-check"></i></div>
-                        </label>
+                                <img class="shadowed br-hua img-responsive" src="images/brands/samsung.svg">
+                                <input type="radio" class="buy-rdb brand-buy-rdb" name="brand" value="samsung" />
+                                <div><i class="d-none fa fa-check"></i></div>
+                            </label>
                     </div>
                 </div>
 
@@ -184,82 +165,82 @@
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm1" name="model" value="Huawei P20 Pro" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm1" name="model" value="Huawei P20 Pro" />
                                 <label class="model-btn-labels" for="hm1">Huawei P20 Pro</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm2" name="model" value="Huawei P20" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm2" name="model" value="Huawei P20" />
                                 <label class="model-btn-labels" for="hm2">Huawei P20 </label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm3" name="model" value="Huawei P20 Lite" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm3" name="model" value="Huawei P20 Lite" />
                                 <label class="model-btn-labels" for="hm3">Huawei P20 Lite</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm4" name="model" value="Huawei P10 Plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm4" name="model" value="Huawei P10 Plus" />
                                 <label class="model-btn-labels" for="hm4">Huawei P10 Plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm5" name="model" value="Huawei P10" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm5" name="model" value="Huawei P10" />
                                 <label class="model-btn-labels" for="hm5">Huawei P10</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm6" name="model" value="Huawei P10 Lite" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm6" name="model" value="Huawei P10 Lite" />
                                 <label class="model-btn-labels" for="hm6">Huawei P10 Lite</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm7" name="model" value="Huawei P9 Plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm7" name="model" value="Huawei P9 Plus" />
                                 <label class="model-btn-labels" for="hm7">Huawei P9 Plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm8" name="model" value="Huawei P9" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm8" name="model" value="Huawei P9" />
                                 <label class="model-btn-labels" for="hm8">Huawei P9</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm9" name="model" value="Huawei P9 Lite" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm9" name="model" value="Huawei P9 Lite" />
                                 <label class="model-btn-labels" for="hm9">Huawei P9 Lite</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm10" name="model" value="Huawei P8" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm10" name="model" value="Huawei P8" />
                                 <label class="model-btn-labels" for="hm10">Huawei P8</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm11" name="model" value="Huawei P8 Lite (2017)" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm11" name="model" value="Huawei P8 Lite (2017)" />
                                 <label class="model-btn-labels" for="hm11">Huawei P8 Lite (2017)</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm13" name="model" value="Huawei Mate 10 Pro" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm13" name="model" value="Huawei Mate 10 Pro" />
                                 <label class="model-btn-labels" for="hm13">Huawei Mate 10 Pro</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm14" name="model" value="Huawei Mate 10" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm14" name="model" value="Huawei Mate 10" />
                                 <label class="model-btn-labels" for="hm14">Huawei Mate 10</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm15" name="model" value="Huawei Mate 9" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm15" name="model" value="Huawei Mate 9" />
                                 <label class="model-btn-labels" for="hm15">Huawei Mate 9</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm16" name="model" value="Huawei Mate 8" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm16" name="model" value="Huawei Mate 8" />
                                 <label class="model-btn-labels" for="hm16">Huawei Mate 8</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="hm17" name="model" value="Huawei P Smart" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="hm17" name="model" value="Huawei P Smart" />
                                 <label class="model-btn-labels" for="hm17">Huawei P Smart</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -279,72 +260,72 @@
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im1" name="model" value="iPhone XS Max" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im1" name="model" value="iPhone XS Max" />
                                 <label class="model-btn-labels" for="im1">iPhone XS Max</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im1" name="model" value="iPhone XS" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im1" name="model" value="iPhone XS" />
                                 <label class="model-btn-labels" for="im1">iPhone XS</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im1" name="model" value="iPhone XR" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im1" name="model" value="iPhone XR" />
                                 <label class="model-btn-labels" for="im1">iPhone XR</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im1" name="model" value="iPhone X" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im1" name="model" value="iPhone X" />
                                 <label class="model-btn-labels" for="im1">iPhone X</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im2" name="model" value="iPhone 8 plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im2" name="model" value="iPhone 8 plus" />
                                 <label class="model-btn-labels" for="im2">iPhone 8 plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im3" name="model" value="iPhone 8" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im3" name="model" value="iPhone 8" />
                                 <label class="model-btn-labels" for="im3">iPhone 8</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im4" name="model" value="iPhone 7 plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im4" name="model" value="iPhone 7 plus" />
                                 <label class="model-btn-labels" for="im4">iPhone 7 plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im5" name="model" value="iPhone 7" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im5" name="model" value="iPhone 7" />
                                 <label class="model-btn-labels" for="im5">iPhone 7</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im6" name="model" value="iPhone 6s plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im6" name="model" value="iPhone 6s plus" />
                                 <label class="model-btn-labels" for="im6">iPhone 6s plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im7" name="model" value="iPhone 6 plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im7" name="model" value="iPhone 6 plus" />
                                 <label class="model-btn-labels" for="im7">iPhone 6 plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im8" name="model" value="iPhone 6s" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im8" name="model" value="iPhone 6s" />
                                 <label class="model-btn-labels" for="im8">iPhone 6s</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im9" name="model" value="iPhone 6" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im9" name="model" value="iPhone 6" />
                                 <label class="model-btn-labels" for="im9">iPhone 6</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im10" name="model" value="iPhone 5s" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im10" name="model" value="iPhone 5s" />
                                 <label class="model-btn-labels" for="im10">iPhone 5s</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="im13" name="model" value="iPhone SE" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="im13" name="model" value="iPhone SE" />
                                 <label class="model-btn-labels" for="im13">iPhone SE</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -364,117 +345,117 @@
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm1" name="model" value="Galaxy S9 Plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm1" name="model" value="Galaxy S9 Plus" />
                                 <label class="model-btn-labels" for="gm1">Galaxy S9 Plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm2" name="model" value="Galaxy S9" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm2" name="model" value="Galaxy S9" />
                                 <label class="model-btn-labels" for="gm2">Galaxy S9</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm3" name="model" value="Galaxy S8 Plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm3" name="model" value="Galaxy S8 Plus" />
                                 <label class="model-btn-labels" for="gm3">Galaxy S8 Plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm4" name="model" value="Galaxy S8" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm4" name="model" value="Galaxy S8" />
                                 <label class="model-btn-labels" for="gm4">Galaxy S8</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm5" name="model" value="Galaxy S7 Edge" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm5" name="model" value="Galaxy S7 Edge" />
                                 <label class="model-btn-labels" for="gm5">Galaxy S7 Edge</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm6" name="model" value="Galaxy S7" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm6" name="model" value="Galaxy S7" />
                                 <label class="model-btn-labels" for="gm6">Galaxy S7</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm7" name="model" value="Galaxy S6 Edge Plus" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm7" name="model" value="Galaxy S6 Edge Plus" />
                                 <label class="model-btn-labels" for="gm7">Galaxy S6 Edge Plus</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm8" name="model" value="Galaxy S6 Edge" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm8" name="model" value="Galaxy S6 Edge" />
                                 <label class="model-btn-labels" for="gm8">Galaxy S6 Edge</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm9" name="model" value="Galaxy S6" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm9" name="model" value="Galaxy S6" />
                                 <label class="model-btn-labels" for="gm9">Galaxy S6</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm10" name="model" value="Galaxy S5" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm10" name="model" value="Galaxy S5" />
                                 <label class="model-btn-labels" for="gm10">Galaxy S5</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm12" name="model" value="Galaxy Note 8" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm12" name="model" value="Galaxy Note 8" />
                                 <label class="model-btn-labels" for="gm12">Galaxy Note 8</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm13" name="model" value="Galaxy Note 5" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm13" name="model" value="Galaxy Note 5" />
                                 <label class="model-btn-labels" for="gm13">Galaxy Note 5</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm14" name="model" value="Galaxy Edge" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm14" name="model" value="Galaxy Edge" />
                                 <label class="model-btn-labels" for="gm14">Galaxy Edge</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm15" name="model" value="Galaxy Note 4" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm15" name="model" value="Galaxy Note 4" />
                                 <label class="model-btn-labels" for="gm15">Galaxy Note 4</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm17" name="model" value="Galaxy A8 (2018)" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm17" name="model" value="Galaxy A8 (2018)" />
                                 <label class="model-btn-labels" for="gm17">Galaxy A8 (2018)</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm18" name="model" value="Galaxy A7 (2017)" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm18" name="model" value="Galaxy A7 (2017)" />
                                 <label class="model-btn-labels" for="gm18">Galaxy A7 (2017)</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm19" name="model" value="Galaxy A7 (2016)" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm19" name="model" value="Galaxy A7 (2016)" />
                                 <label class="model-btn-labels" for="gm19">Galaxy A7 (2016)</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm20" name="model" value="Galaxy A7" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm20" name="model" value="Galaxy A7" />
                                 <label class="model-btn-labels" for="gm20">Galaxy A7</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm21" name="model" value="Galaxy A5 (2017)" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm21" name="model" value="Galaxy A5 (2017)" />
                                 <label class="model-btn-labels" for="gm21">Galaxy A5 (2017)</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm22" name="model" value="Galaxy A5 (2016)" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm22" name="model" value="Galaxy A5 (2016)" />
                                 <label class="model-btn-labels" for="gm22">Galaxy A5 (2016)</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm26" name="model" value="Galaxy J7 (2016)" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm26" name="model" value="Galaxy J7 (2016)" />
                                 <label class="model-btn-labels" for="gm26">Galaxy J7 (2016)</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm27" name="model" value="Galaxy J7 Prime" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm27" name="model" value="Galaxy J7 Prime" />
                                 <label class="model-btn-labels" for="gm27">Galaxy J7 Prime</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="mbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb model-sell-rdb" id="gm28" name="model" value="Galaxy J5 Prime" />
+                                <input type="radio" class="buy-rdb model-buy-rdb" id="gm28" name="model" value="Galaxy J5 Prime" />
                                 <label class="model-btn-labels" for="gm28">Galaxy J5 Prime</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -490,12 +471,12 @@
             <!-- Huawei Capacity fieldsets-->
 
             <fieldset class="capacity-hp20pro">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P20 Pro's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P20 Pro memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc1" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc1" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="hc1">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -508,12 +489,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp20">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P20's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P20 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc2" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc2" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="hc2">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -526,17 +507,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp20l">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P20 Lite's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P20 Lite memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc3" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc3" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc3">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc4" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc4" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="hc4">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -549,17 +530,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp10p">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P10 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P10 Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc5" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc5" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="hc5">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc6" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc6" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc6">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -572,17 +553,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp10">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P10's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P10 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc7" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc7" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc7">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc8" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc8" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="hc8">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -595,12 +576,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp10l">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P10 Lite's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P10 Lite memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc9" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc9" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="hc9">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -613,12 +594,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp9p">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P9 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P9 Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc10" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc10" name="capacity" value="64" />
                                 <label class="capacity-btn-labels-test" for="hc10">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -631,17 +612,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp9">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P9's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P9 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc11" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc11" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc11">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc12" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc12" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="hc12">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -654,12 +635,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp9l">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P9 Lite's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P9 Lite memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc13" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc13" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="hc13">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -672,12 +653,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp8">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P8 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc14" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc14" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc14">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -690,12 +671,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hp8l17">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P8 Lite (2017)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P8 Lite (2017) memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc15" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc15" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="hc15">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -708,17 +689,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hm10p">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei Mate 10 Pro's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei Mate 10 Pro memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc17" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc17" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="hc17">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc18" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc18" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc18">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -731,12 +712,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hm10">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei Mate 10's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei Mate 10 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc19" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc19" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc19">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -749,12 +730,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hm9">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei Mate 9's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei Mate 9 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc20" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc20" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc20">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -767,17 +748,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hm8">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei Mate 8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei Mate 8 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc21" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc21" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc21">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc22" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc22" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="hc22">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -790,17 +771,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-hps">
-                <h4 id="fset-titles" class="text-center">Please select your Huawei P Smart's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Huawei P Smart memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc23" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc23" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="hc23">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="hc24" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="hc24" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="hc24">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -816,22 +797,22 @@
             <!-- iPhone Capacity Fieldsets-->
 
             <fieldset class="capacity-ipxsm">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone XS Max's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone XS Max memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic1" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic1" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic1">512 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic2" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic2" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic2">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic2" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic2" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic2">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -844,22 +825,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ipxs">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone XS's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone XS memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic1" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic1" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic1">512 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic2" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic2" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic2">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic2" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic2" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic2">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -872,23 +853,23 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ipxr">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone XR's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone XR memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic1" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic1" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic1">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic2" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic2" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic2">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
 
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic2" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic2" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic2">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -901,17 +882,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ipx">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone X's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone X memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic1" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic1" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic1">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic2" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic2" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic2">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -924,17 +905,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip8p">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 8 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 8 Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic3" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic3" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic3">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic4" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic4" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic4">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -947,17 +928,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip8">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 8 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic5" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic5" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic5">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic6" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic6" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic6">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -970,22 +951,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip7p">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 7 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 7 Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic7" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic7" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic7">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic8" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic8" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic8">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic9" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic9" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="ic9">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -998,22 +979,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip7">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 7's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 7 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic10" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic10" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="ic10">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic11" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic11" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic11">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic12" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic12" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="ic12">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1026,27 +1007,27 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip6sp">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 6s Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 6s Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic13" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic13" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic13">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic14" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic14" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic14">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic15" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic15" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="ic15">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic16" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic16" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="ic16">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1059,22 +1040,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip6p">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 6 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 6 Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic17" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic17" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic17">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic18" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic18" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic18">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic19" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic19" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="ic19">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1087,27 +1068,27 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip6s">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 6S's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 6S memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic20" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic20" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic20">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic21" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic21" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic21">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic22" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic22" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="ic22">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic23" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic23" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="ic23">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1120,27 +1101,27 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip6">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 6's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 6 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic24" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic24" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic24">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic25" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic25" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic25">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic26" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic26" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="ic26">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic27" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic27" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="ic27">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1153,22 +1134,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ip5s">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone 5S's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone 5S memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic28" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic28" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic28">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic29" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic29" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="ic29">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic30" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic30" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="ic30">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1181,27 +1162,27 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ipse">
-                <h4 id="fset-titles" class="text-center">Please select your iPhone SE's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a iPhone SE memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic37" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic37" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="ic37">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic38" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic38" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="ic38">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic39" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic39" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="ic39">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="ic40" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="ic40" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="ic40">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1216,22 +1197,22 @@
 
             <!-- Samsung Capacity fieldsets -->
             <fieldset class="capacity-gs9p">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S9 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S9 Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc1" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc1" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="sc1">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc2" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc2" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc2">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc3" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc3" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc3">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1244,22 +1225,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs9">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S9's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S9 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc4" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc4" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="sc4">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc5" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc5" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc5">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc6" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc6" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc6">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1272,12 +1253,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs8p">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S8 Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S8 Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc7" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc7" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc7">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1290,12 +1271,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs8">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S8 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc8" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc8" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc8">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1308,22 +1289,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs7e">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S7 Edge's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S7 Edge memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc9" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc9" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc9">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc10" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc10" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc10">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc11" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc11" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc11">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1336,17 +1317,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs7">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S7's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S7 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc12" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc12" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc12">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc13" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc13" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc13">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1359,17 +1340,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs6ep">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S6 Edge Plus's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S6 Edge Plus memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc14" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc14" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc14">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc15" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc15" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc15">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1382,22 +1363,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs6e">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S6 Edge's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S6 Edge memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc16" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc16" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc16">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc17" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc17" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc17">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc18" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc18" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc18">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1409,22 +1390,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs6">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S6's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S6 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc19" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc19" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc19">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc20" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc20" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc20">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc21" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc21" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc21">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1437,17 +1418,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gs5">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy S5's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy S5 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc22" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc22" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc22">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc23" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc23" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc23">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1460,22 +1441,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gn8">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy Note 8's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy Note 8 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc27" name="capacity" value="256" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc27" name="capacity" value="256" />
                                 <label class="capacity-btn-labels" for="sc27">256 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc28" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc28" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc28">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc29" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc29" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc29">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1488,22 +1469,22 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gn5">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy Note 5's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy Note 5 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc30" name="capacity" value="128" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc30" name="capacity" value="128" />
                                 <label class="capacity-btn-labels" for="sc30">128 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc31" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc31" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc31">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc32" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc32" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc32">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1516,12 +1497,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ge">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy Edge's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy Edge memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc33" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc33" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc33">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1534,12 +1515,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gn4">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy Note 4's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy Note 4 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc34" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc34" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc34">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1552,17 +1533,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ga818">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy A8 (2018)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy A8 (2018) memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc38" name="capacity" value="64" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc38" name="capacity" value="64" />
                                 <label class="capacity-btn-labels" for="sc38">64 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc39" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc39" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc39">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1575,12 +1556,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ga717">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy A7 (2017)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy A7 (2017) memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc40" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc40" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc40">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1593,12 +1574,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ga716">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy A7 (2016)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy A7 (2016) memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc41" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc41" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc41">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1611,12 +1592,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ga7">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy A7's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy A7 memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc42" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc42" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc42">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1629,12 +1610,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ga517">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy A5 (2017)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy A5 (2017) memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc43" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc43" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc43">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1647,12 +1628,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-ga516">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy A5 (2016)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy A5 (2016) memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc44" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc44" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc44">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1665,12 +1646,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gj716">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy J7 (2016)'s memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy J7 (2016) memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc48" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc48" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc48">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1683,17 +1664,17 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gj7p">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy J7 Prime's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy J7 Prime memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc49" name="capacity" value="32" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc49" name="capacity" value="32" />
                                 <label class="capacity-btn-labels" for="sc49">32 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc50" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc50" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc50">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1706,12 +1687,12 @@
                 </div>
             </fieldset>
             <fieldset class="capacity-gj5p">
-                <h4 id="fset-titles" class="text-center">Please select your Galaxy J5 Prime's memory capacity</h4>
+                <h4 id="fset-titles" class="text-center">Choose a Galaxy J5 Prime memory capacity</h4>
                 <div class="container">
                     <div>
                         <ul id="btn-uls" class="h-m row">
                             <li class="cbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb cap-sell-rdb" id="sc51" name="capacity" value="16" />
+                                <input type="radio" class="buy-rdb cap-buy-rdb" id="sc51" name="capacity" value="16" />
                                 <label class="capacity-btn-labels" for="sc51">16 GB</label>
                                 <div><i class="d-none fa fa-check"></i></div>
                             </li>
@@ -1724,71 +1705,7 @@
                 </div>
             </fieldset>
 
-            <!-- Working Status fieldset-->
-
-            <fieldset class="working_status ">
-                <h4 id="fset-titles" class="text-center">What is your <span class="phone-mdl-ws"></span>'s Condition?</h4>
-                <div class="container">
-                    <div>
-                        <ul class="h-ws row smlr-uls">
-                            <li class="wsbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb ws-sell-rdb" id="ws1" name="working_status" value="Excellent" />
-                                <label class="ws-btn-labels" for="ws11">
-                                    <p id="wslbl">Excellent</p>                                   
-                                    <p class="ws-description">Good as new. Has no dents or scratches.</p>
-                                </label>
-                                <div><i class="d-none fa fa-check"></i></div>
-                            </li>
-                            <li class="wsbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb ws-sell-rdb" id="ws2" name="working_status" value="Good" />
-                                <label class="ws-btn-labels" for="ws2">
-                                    <p id="wslbl">Good</p>
-                                    <p class="ws-description">Only has light scratches and works perfectly.</p>
-                                </label>
-                                <div><i class="d-none fa fa-check"></i></div>
-                            </li>
-                            <li class="wsbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="radio" class="sell-rdb ws-sell-rdb" id="ws3" name="working_status" value="Damaged" />
-                                <label class="ws-btn-labels" for="ws3">
-                                    <p id="wslbl">Damaged</p>
-                                    <p class="ws-description">Switches on and works but screen is cracked.</p>
-                                </label>
-                                <div><i class="d-none fa fa-check"></i></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="container wizard-buttons">
-                    <button type="button" class="btn btn-previous ws-btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next ws-btn-next">Next</button>
-                </div>
-            </fieldset>
-
-            <!-- Accessories fieldset-->
-            <fieldset class="accessories ">
-                <h4 id="fset-titles" class="text-center">What original accessories are included with your <span class="phone-mdl-accs"></span>?</h4>
-                <div class="container">
-                    <div>
-                        <p class="lead text-center"><i>*Skip if your <span class="phone-mdl-accs"></span> has none</i></p>
-                        <ul class="h-ac row smlr-uls">
-                            <li class="acbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="checkbox" class="sell-chb acc-sell-chb" id="ac1" name="accessories" value="Wall Charger" />
-                                <label class="ws-btn-labels" for="ac1">Wall Charger</label>
-                                <div><i class="d-none fa fa-check"></i></div>
-                            </li>
-                            <li class="acbf text-center col-sm-6 col-md-6 col-lg-3">
-                                <input type="checkbox" class="sell-chb acc-sell-chb" id="ac2" name="accessories" value="USB Cable" />
-                                <label class="ws-btn-labels" for="ac2">USB Cable</label>
-                                <div><i class="d-none fa fa-check"></i></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="container wizard-buttons">
-                    <button type="button" class="btn btn-previous accs-btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next accs-btn-next">Next</button>
-                </div>
-            </fieldset>
+            <!-- Contact details -->
             <fieldset class="details ">
                 <h4 id="wlcm-ttl" class="text-center">Welcome back</h4>
                 <h5 id="fset-titles" class="text-center">Please enter your contact details</h5>
@@ -1815,25 +1732,21 @@
                     <button type="button" class="btn btn-next dtls-btn-next">Next</button>
                 </div>
             </fieldset>
+
+            <!-- Valuation -->
             <fieldset onload="counter()" class="value ">
-                <h4 id="fset-titles" class="text-center">To sell your <span class="phone-mdl-accs"></span>:</h4>
+                <h4 id="fset-titles" class="text-center">To buy the <span class="phone-mdl-val"></span></h4>
                 <span id="slvalue"></span>
                 <div class="valuation">
-                    <p class="deduct text-center">Collection cost:
-                        <span class="collection">Ksh. 650</span>
-                    </p>
-                    <p class="deduct text-center">Rununua fee:
-                        <span class="our-fees">Ksh. </span>
-                    </p>
-                    <p class="text-center"><span class="customer-pay">You get:</span>
+                    <p class="text-center"><span class="customer-pay">You will pay:</span>
                         <p class="cust-pay text-center">Ksh.
                             <span id="cust-pay"></span>
                         </p>
                     </p>
                 </div>
 
-                <div class="sell-button">
-                    <button type="button" class="btn-sellval">Sell  <img class="sell-btn-ico" src="images/icons/sell icon.svg" width="20px"></button>
+                <div class="buy-button">
+                    <button type="button" class="btn-buyval">Buy  <img class="buy-btn-ico" src="images/icons/sell icon.svg" width="20px"></button>
                 </div>
                 <div class="container wizard-buttons">
                     <button type="button" id="val-prev" class="btn btn-previous val-btn-previous">Change Contact</button>
@@ -1842,42 +1755,43 @@
             </fieldset>
 
         </form>
+
     </div>
 
-    <div id="d-wrapper ">
-        <div class="futa clearfix">
-            <a id="FAQ" href="# " align="center ">
+    <div style="margin-bottom: -40px;" id="d-wrapper">
+        <div class="futa">
+            <a href="#" style="margin:20px; color: #fff; text-decoration: none;" align="center">
                 <h6>FAQ</h6>
             </a>
-            <div align="center " class="footer-social ">
-                <a id="smedia-icos" href="# "><img src="images/icons/facebook-white.svg " width="30px " height="30px "></a>
-                <a id="smedia-icos" href="# "><img src="images/icons/twitter-white.svg " width="30px " height="30px "></a>
-                <a id="smedia-icos" href="# "><img src="images/icons/instagram-white.svg " width="30px " height="30px "></a>
+            <div style="color: #fff; margin: 0 0 40px 0;" align="center" class="footer-social">
+                <a href="#" style="margin: 20px"><img src="images/icons/facebook-white.svg" width="30px" height="30px"></a>
+                <a href="#" style="margin: 20px"><img src="images/icons/twitter-white.svg" width="30px" height="30px"></a>
+                <a href="#" style="margin: 20px"><img src="images/icons/instagram-white.svg" width="30px" height="30px"></a>
             </div>
-            <div align="center " class="footer-payments ">
-                <a id="pymt-icos"><img src="images/icons/visa.png " width="50px " height="15px "></a>
-                <a id="pymt-icos"><img src="images/icons/mastercard.png " width="70px " height="40px "></a>
-                <a id="pymt-icos"><img src="images/icons/paypal.png " width="70px " height="20px "></a>
-                <a id="pymt-icos"><img src="images/icons/mpesa.png " width="80px " height="35px "></a>
-                <a id="pymt-icos"><img src="images/icons/airtel-money.png " width="50px " height="30px "></a>
+            <div style="margin: 0 0 20px 0" align="center" class="footer-payments">
+                <a style="margin:0 20px;"><img src="images/icons/visa.png" width="50px" height="15px"></a>
+                <a style="margin:0 20px;"><img src="images/icons/mastercard.png" width="70px" height="40px"></a>
+                <a style="margin:0 20px;"><img src="images/icons/paypal.png" width="70px" height="20px"></a>
+                <a style="margin:0 20px;"><img src="images/icons/mpesa.png" width="80px" height="35px"></a>
+                <a style="margin:0 20px;"><img src="images/icons/airtel-money.png" width="50px" height="30px"></a>
             </div>
-            <hr class="my-1 ">
-            <div align="center ">
-                <p class="lead copyrgt">Rununua 2018</p>
+            <hr class="my-1">
+            <div align="center">
+                <p class="lead" style="font-size: 16px; color: #fff; margin-bottom: -20px; padding-bottom: 20px;">Rununua 2018</p>
             </div>
 
         </div>
     </div>
 
-    <svg height="0 " width="0 " xmlns="http://www.w3.org/2000/svg ">
-        <filter id="drop-shadow ">
-            <feGaussianBlur in="SourceAlpha " stdDeviation="2.2 "/>
-            <feOffset dx="12 " dy="12 " result="offsetblur "/>
-            <feFlood flood-color="rgba(0,0,0,0.5) "/>
-            <feComposite in2="offsetblur " operator="in "/>
+    <svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <filter id="drop-shadow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
+            <feOffset dx="12" dy="12" result="offsetblur"/>
+            <feFlood flood-color="rgba(0,0,0,0.5)"/>
+            <feComposite in2="offsetblur" operator="in"/>
             <feMerge>
                 <feMergeNode/>
-                <feMergeNode in="SourceGraphic "/>
+                <feMergeNode in="SourceGraphic"/>
             </feMerge>
         </filter>
     </svg>
@@ -1886,17 +1800,17 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/js.cookie.js"></script>
-    <script src="js/sell-stepper.js "></script>
+    <script src="js/buy-stepper.js "></script>
     <script src="js/selectors.js "></script>
     <script src="js/select-btns.js"></script>
     <script src="js/details.js"></script>
     <script>
         $(document).ready(function() {
             $(".accs-btn-next").click(function() {
-                let brandVal = document.getElementById("sell-wiz").elements["brand"].value;
-                let modelVal = document.getElementById("sell-wiz").elements["model"].value;
-                let capacityVal = document.getElementById("sell-wiz").elements["capacity"].value;
-                let statusVal = document.getElementById("sell-wiz").elements["working_status"].value;
+                let brandVal = document.getElementById("buy-wiz").elements["brand"].value;
+                let modelVal = document.getElementById("buy-wiz").elements["model"].value;
+                let capacityVal = document.getElementById("buy-wiz").elements["capacity"].value;
+                let statusVal = document.getElementById("buy-wiz").elements["working_status"].value;
                 let achb1 = document.getElementById("ac1").checked;
                 let achb2 = document.getElementById("ac2").checked;
                 if (achb1 && achb2) {
@@ -1905,7 +1819,7 @@
                     accessoryVal = "";
                 } else {
                     let checkedValue = null;
-                    let inputElements = document.getElementById("sell-wiz").elements["accessories"];
+                    let inputElements = document.getElementById("buy-wiz").elements["accessories"];
                     for (var i = 0; inputElements[i]; ++i) {
                         if (inputElements[i].checked) {
                             checkedValue = inputElements[i].value;

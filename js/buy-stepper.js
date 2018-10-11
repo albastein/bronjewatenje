@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
         var next_step = true;
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
-        var brand = document.getElementById("sell-wiz").elements["brand"];
+        var brand = document.getElementById("buy-wiz").elements["brand"];
         var brand_value = brand.value;
 
         // Validation
@@ -91,13 +91,13 @@ jQuery(document).ready(function() {
 
     $('form .model-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
-        var model_rdb = document.getElementById("sell-wiz").elements["model"];
-        var brand_rdb = document.getElementById("sell-wiz").elements["brand"];
+        var model_rdb = document.getElementById("buy-wiz").elements["model"];
+        var brand_rdb = document.getElementById("buy-wiz").elements["brand"];
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
 
         /*
-        var brand = document.getElementById("sell-wiz").elements["brand"];
+        var brand = document.getElementById("buy-wiz").elements["brand"];
         var brand_value = brand.value;
         */
 
@@ -120,7 +120,7 @@ jQuery(document).ready(function() {
         var next_step = true;
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
-        var model = document.getElementById("sell-wiz").elements["model"];
+        var model = document.getElementById("buy-wiz").elements["model"];
         var model_value = model.value;
 
         // Validation
@@ -283,7 +283,7 @@ jQuery(document).ready(function() {
         var next_step = true;
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
-        var model = document.getElementById("sell-wiz").elements["model"];
+        var model = document.getElementById("buy-wiz").elements["model"];
         var model_value = model.value;
 
         // Validation
@@ -431,7 +431,7 @@ jQuery(document).ready(function() {
         var next_step = true;
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
-        var model = document.getElementById("sell-wiz").elements["model"];
+        var model = document.getElementById("buy-wiz").elements["model"];
         var model_value = model.value;
 
         // Validation
@@ -633,7 +633,7 @@ jQuery(document).ready(function() {
     // Huawei
     $('form .hc-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
-        var cap_rdb = document.getElementById("sell-wiz").elements["capacity"];
+        var cap_rdb = document.getElementById("buy-wiz").elements["capacity"];
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
         var active_cnext = parent_fieldset.find('.capacity-btn-next');
@@ -655,7 +655,7 @@ jQuery(document).ready(function() {
     // iPhone
     $('form .ic-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
-        var cap_rdb = document.getElementById("sell-wiz").elements["capacity"];
+        var cap_rdb = document.getElementById("buy-wiz").elements["capacity"];
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
         var active_cnext = parent_fieldset.find('.capacity-btn-next');
@@ -677,7 +677,7 @@ jQuery(document).ready(function() {
     // Samsung
     $('form .sc-btn-previous').on('click', function() {
         var parent_fieldset = $(this).parents('fieldset');
-        var cap_rdb = document.getElementById("sell-wiz").elements["capacity"];
+        var cap_rdb = document.getElementById("buy-wiz").elements["capacity"];
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
         var active_cnext = parent_fieldset.find('.capacity-btn-next');
@@ -702,8 +702,12 @@ jQuery(document).ready(function() {
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
         var active_cnext = parent_fieldset.find('.capacity-btn-next');
-        var capacity = document.getElementById("sell-wiz").elements["capacity"];
+        var capacity = document.getElementById("buy-wiz").elements["capacity"];
         var capacity_value = capacity.value;
+        let fncookie = Cookies.get("firstName");
+        let lncookie = Cookies.get("lastName");
+        let ecookie = Cookies.get("email");
+        let pncookie = Cookies.get("phoneNumber");
 
         if (capacity_value == '') {
             active_cnext.addClass('vcapacity-btn-next');
@@ -733,150 +737,21 @@ jQuery(document).ready(function() {
             parent_fieldset.fadeOut(200, function() {
                 current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                 bar_progress(progress_line, 'right');
-                $(this).nextAll('.working_status').fadeIn();
-                scroll_to_class($('form'), 20);
-            });
-
-            $('.phone-mdl-ws').append(document.getElementById("sell-wiz").elements["model"].value);
-        }
-    });
-
-    /* previous step button in step 4 (Working Status) */
-    // previous
-    $('form .ws-btn-previous').on('click', function() {
-        var parent_fieldset = $(this).parents('fieldset');
-        var ws_rdb = document.getElementById("sell-wiz").elements["working_status"];
-        var current_active_step = $('form').find('.form-wizard.active');
-        var progress_line = $('form').find('.progress-line');
-
-        $('.newws-btn-next').popover('hide');
-        $('.newws-btn-next').popover('disable');
-        $('.ws-btn-next').removeClass('newws-btn-next');
-
-        $(this).parents('fieldset').fadeOut(200, function() {
-            current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
-            bar_progress(progress_line, 'left');
-            $(this).prevAll('.selected_capacity').fadeIn().removeClass('selected_capacity');
-            scroll_to_class($('form'), 20);
-            $('.phone-mdl-ws').replaceWith('<span class="phone-mdl-ws"></span>');
-            $(ws_rdb).prop('checked', false);
-            parent_fieldset.find('.wsbf-checked').removeClass('wsbf-checked');
-
-        });
-    });
-
-
-    // next
-    $('form .ws-btn-next').on('click', function() {
-        var parent_fieldset = $(this).parents('fieldset');
-        var current_active_step = $('form').find('.form-wizard.active');
-        var progress_line = $('form').find('.progress-line');
-        var wstatus = document.getElementById("sell-wiz").elements["working_status"];
-        var wstatus_value = wstatus.value;
-
-        if (wstatus_value == '') {
-            $('.ws-btn-next').addClass('newws-btn-next');
-            $('.newws-btn-next').popover({
-                container: 'body',
-                content: 'Please select a condition',
-                placement: 'top',
-                toggle: 'popover'
-            });
-            $('.newws-btn-next').popover('enable');
-            $('.newws-btn-next').popover('show');
-            $('.newws-btn-next').on('shown.bs.popover', function() {
-                var $pop = $(this);
-                setTimeout(function() {
-                    $pop.popover('hide');
-                }, 2000);
-                setTimeout(function() {
-                    $pop.popover();
-                }, 2200);
-            });
-        } else {
-            $('.newws-btn-next').popover('hide');
-            $('.newws-btn-next').popover('disable');
-            $('.ws-btn-next').removeClass('newws-btn-next');
-
-            parent_fieldset.fadeOut(200, function() {
-                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-                bar_progress(progress_line, 'right');
-                $(this).nextAll('.accessories').fadeIn();
-                scroll_to_class($('form'), 20);
-            });
-
-            $('.phone-mdl-accs').append(document.getElementById("sell-wiz").elements["model"].value);
-        }
-    });
-
-
-    /* previous step button in step 5 (Accessories) */
-    // previous
-    $('form .accs-btn-previous').on('click', function() {
-        var parent_fieldset = $(this).parents('fieldset');
-        var acc_chb = document.getElementById("sell-wiz").elements["accessories"];
-        var current_active_step = $('form').find('.form-wizard.active');
-        var progress_line = $('form').find('.progress-line');
-
-        $('.newaccs-btn-next').popover('hide');
-        $('.newaccs-btn-next').popover('disable');
-        $('.ws-btn-next').removeClass('newaccs-btn-next');
-
-        $(this).parents('fieldset').fadeOut(200, function() {
-            current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
-            bar_progress(progress_line, 'left');
-            $(this).prevAll('.working_status').fadeIn();
-            scroll_to_class($('form'), 20);
-            $('.phone-mdl-accs').replaceWith('<span class="phone-mdl-accs"></span>');
-            $(acc_chb).prop('checked', false);
-            parent_fieldset.find('.acbf-checked').removeClass('acbf-checked');
-        });
-
-    });
-
-    // next
-    $('form .accs-btn-next').on('click', function() {
-        var parent_fieldset = $(this).parents('fieldset');
-        var current_active_step = $('form').find('.form-wizard.active');
-        var progress_line = $('form').find('.progress-line');
-        var fnbox = document.forms["sell-wiz"]["firstName"].value;
-        var lnbox = document.forms["sell-wiz"]["lastName"].value;;
-        var ebox = document.forms["sell-wiz"]["email"].value;
-        var pnbox = document.forms["sell-wiz"]["phoneNumber"].value;
-        var fncookie = Cookies.get("firstName");
-        var lncookie = Cookies.get("lastName");
-        var ecookie = Cookies.get("email");
-        var pncookie = Cookies.get("phoneNumber");
-
-        if (fncookie) { fnbox = fncookie; }
-        if (lncookie) { lnbox = lncookie; }
-        if (ecookie) { ebox = ecookie; }
-        if (pncookie) { pnbox = pncookie; }
-
-        //No need for alert because accessories can be blank
-
-        if (fnbox !== "" && lnbox !== "" && ebox !== "" && pnbox !== "") {
-            parent_fieldset.fadeOut(200, function() {
-                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-                $('.active').removeClass('active').addClass('activated').next().addClass('active');
-                bar_progress(progress_line, 'right');
-                bar_progress(progress_line, 'right');
-                $(this).nextAll('.value').fadeIn();
-                scroll_to_class($('form'), 20);
-            });
-        } else {
-            parent_fieldset.fadeOut(200, function() {
-                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-                bar_progress(progress_line, 'right');
                 $(this).nextAll('.details').fadeIn();
                 scroll_to_class($('form'), 20);
             });
-        };
+
+            $('.phone-mdl-ws').append(document.getElementById("buy-wiz").elements["model"].value);
+
+            if (fncookie = Cookies.get("firstName")) document.forms["buy-wiz"]["firstName"].value = fncookie;
+            if (lncookie = Cookies.get("lastName")) document.forms["buy-wiz"]["lastName"].value = lncookie;
+            if (ecookie = Cookies.get("email")) document.forms["buy-wiz"]["email"].value = ecookie;
+            if (pncookie = Cookies.get("phoneNumber")) document.forms["buy-wiz"]["phoneNumber"].value = pncookie;
+        }
     });
 
     /* previous step button in step 6 (Details) */
     // previous
-
     $('form .dtls-btn-previous').on('click', function() {
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
@@ -890,8 +765,9 @@ jQuery(document).ready(function() {
         $(this).parents('fieldset').fadeOut(200, function() {
             current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
             bar_progress(progress_line, 'left');
-            $(this).prevAll('.accessories').fadeIn();
+            $(this).prevAll('.selected_capacity').fadeIn().removeClass('selected_capacity');
             scroll_to_class($('form'), 20);
+            $('.phone-mdl-ws').replaceWith('<span class="phone-mdl-ws"></span>');
         });
     });
 
@@ -900,10 +776,10 @@ jQuery(document).ready(function() {
         var parent_fieldset = $(this).parents('fieldset');
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
-        var fnbox = document.forms["sell-wiz"]["firstName"].value;
-        var lnbox = document.forms["sell-wiz"]["lastName"].value;;
-        var ebox = document.forms["sell-wiz"]["email"].value;
-        var pnbox = document.forms["sell-wiz"]["phoneNumber"].value;
+        var fnbox = document.forms["buy-wiz"]["firstName"].value;
+        var lnbox = document.forms["buy-wiz"]["lastName"].value;;
+        var ebox = document.forms["buy-wiz"]["email"].value;
+        var pnbox = document.forms["buy-wiz"]["phoneNumber"].value;
 
         if (fnbox !== "" && lnbox !== "" && ebox !== "" && pnbox !== "") {
             Cookies.set("firstName", fnbox, { expires: 1 });
@@ -921,6 +797,8 @@ jQuery(document).ready(function() {
                 $(this).nextAll('.value').fadeIn();
                 scroll_to_class($('form'), 20);
             });
+
+            $('.phone-mdl-val').append(document.getElementById("buy-wiz").elements["model"].value);
         } else {
             $('.dtls-btn-next').addClass('newdtls-btn-next');
             $('.newdtls-btn-next').popover({
@@ -956,6 +834,8 @@ jQuery(document).ready(function() {
             $(this).prevAll('.details').fadeIn();
             scroll_to_class($('form'), 20);
         });
+
+        $('.phone-mdl-val').replaceWith('<span class="phone-mdl-val"></span>');
     });
 
     // add new phone

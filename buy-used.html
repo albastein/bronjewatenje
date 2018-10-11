@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Buy phones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/ico" href="images/title-logo.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/avatar.css">
+    <link rel="stylesheet" href="css/sell-progress.css">
+    <link rel="stylesheet" href="css/selectors.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="pull-left" href="index.html">
+                    <img class="big-logo img-responsive" src="images/rununua-logo.svg" width="130px">
+                    <img class="small-logo img-responsive" src="images/rununua-logo.svg" width="100px">
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a style="color:white" class="lead nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:white" class="lead nav-link" href="sell.html">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="navi-link" class="lead nav-link" href="buy-new.html">Buy new</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="navi-link" class="lead nav-link" href="buy-used.html">Buy used</a>
+                    </li>
+                    <li class="avatar-menu nav-item">
+                        <a style="color:white" class="lead nav-link" href="#">Log in</a>
+                    </li>
+                    <li class="avatar-menu nav-item">
+                        <a style="color:white" class="lead nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+                <div class="dropdown hidden-md-down">
+                    <a class="avatar pull-right btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/icons/avatar.png" /></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Log in</a>
+                        <a class="dropdown-item" href="#">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div style="background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));" class="sell-a-phone">
+        <br>
+        <h3 style="text-align:center;  color:#07454C;">Used phones in excellent condition</h3>
+
+    </div>
+
+    <div style="margin-bottom: -40px;" id="d-wrapper">
+        <div class="futa">
+            <a href="#" style="margin:20px; color: #fff; text-decoration: none;" align="center">
+                <h6>FAQ</h6>
+            </a>
+            <div style="color: #fff; margin: 0 0 40px 0;" align="center" class="footer-social">
+                <a href="#" style="margin: 20px"><img src="images/icons/facebook-white.svg" width="30px" height="30px"></a>
+                <a href="#" style="margin: 20px"><img src="images/icons/twitter-white.svg" width="30px" height="30px"></a>
+                <a href="#" style="margin: 20px"><img src="images/icons/instagram-white.svg" width="30px" height="30px"></a>
+            </div>
+            <div style="margin: 0 0 20px 0" align="center" class="footer-payments">
+                <a style="margin:0 20px;"><img src="images/icons/visa.png" width="50px" height="15px"></a>
+                <a style="margin:0 20px;"><img src="images/icons/mastercard.png" width="70px" height="40px"></a>
+                <a style="margin:0 20px;"><img src="images/icons/paypal.png" width="70px" height="20px"></a>
+                <a style="margin:0 20px;"><img src="images/icons/mpesa.png" width="80px" height="35px"></a>
+                <a style="margin:0 20px;"><img src="images/icons/airtel-money.png" width="50px" height="30px"></a>
+            </div>
+            <hr class="my-1">
+            <div align="center">
+                <p class="lead" style="font-size: 16px; color: #fff; margin-bottom: -20px; padding-bottom: 20px;">Rununua 2018</p>
+            </div>
+
+        </div>
+    </div>
+
+    <svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+        <filter id="drop-shadow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
+            <feOffset dx="12" dy="12" result="offsetblur"/>
+            <feFlood flood-color="rgba(0,0,0,0.5)"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </svg>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sell-stepper.js"></script>
+    <script src="js/selectors.js"></script>
+</body>
+
+</html>
