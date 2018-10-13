@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container">
             <div class="navbar-header">
                 <a class="pull-left" href="index.html">
@@ -44,7 +44,7 @@
                     <li class="nav-item">
                         <a style="color:white" class="lead nav-link" href="sell.html">Sell</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a id="navi-link" class="lead nav-link" href="buy-new.html">Buy new</a>
                     </li>
                     <li class="nav-item">
@@ -1743,6 +1743,7 @@
                             <span id="cust-pay"></span>
                         </p>
                     </p>
+                    <p class="font-weight-light text-muted font-italic text-center">inclusive of Ksh. 650 delivery fee*</p>
                 </div>
 
                 <div class="buy-button">
@@ -1750,7 +1751,7 @@
                 </div>
                 <div class="container wizard-buttons">
                     <button type="button" id="val-prev" class="btn btn-previous val-btn-previous">Change Contact</button>
-                    <button type="button" class="btn btn-outline-primary add-new-btn">Add Another Phone</button>
+                    <button type="button" class="btn btn-outline-primary add-new-btn">Buy Another Phone</button>
                 </div>
             </fieldset>
 
@@ -1804,6 +1805,7 @@
     <script src="js/selectors.js "></script>
     <script src="js/select-btns.js"></script>
     <script src="js/details.js"></script>
+    <script src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $(".accs-btn-next").click(function() {

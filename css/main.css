@@ -2,6 +2,15 @@
     color: white;
 }
 
+#magic-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: #8ee4ec;
+}
+
 .sell-a-phone,
 .buy-a-phone {
     background: linear-gradient( rgb(255, 255, 255), rgb(231, 245, 243));
