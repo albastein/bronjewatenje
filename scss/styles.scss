@@ -20,10 +20,6 @@ $theme-colors: ( "primary": #07454C);
     }
 }
 
-.btn:focus {
-    outline: none;
-}
-
 // Hide avatar on small displays
 @media (max-width: 992px) {
     .avatar {
@@ -343,18 +339,6 @@ $theme-colors: ( "primary": #07454C);
     }
 }
 
-//Weekly offers stars background
-.weekly-offers {
-    background: linear-gradient(324deg, #fff 4%, transparent 4%) -70px 43px, linear-gradient( 36deg, #fff 4%, transparent 4%) 30px 43px, linear-gradient( 72deg, rgb(199, 226, 230) 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, rgb(199, 226, 230) 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, rgb(199, 226, 230) 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, rgb(199, 226, 230) 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #fff 4%, transparent 4%) -20px 93px, linear-gradient( 36deg, #fff 4%, transparent 4%) 80px 93px, linear-gradient( 72deg, rgb(199, 226, 230) 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, rgb(199, 226, 230) 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, rgb(199, 226, 230) 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, rgb(199, 226, 230) 7.5%, transparent 7.5%) 80px 73px;
-    background-color: #fff;
-    background-size: 100px 100px;
-}
-
-// footer bg
-.futa {
-    background-color: #07454C;
-}
-
 // Text hover zoom-fade effect
 @mixin transition($transition) {
     -webkit-transition: $transition;
@@ -398,25 +382,6 @@ $theme-colors: ( "primary": #07454C);
     }
 }
 
-.zig-zag-top hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid rgb(77, 77, 77);
-    margin: 1em 0;
-    padding: 0;
-}
-
-.tenje-brand:hover {
-    border: 2px solid #9ED5D7;
-    background: #F0F7F7;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-html {
-    min-width: 320px;
-}
-
 @-webkit-keyframes Gradient {
     0% {
         background-position: 0% 50%
@@ -451,33 +416,4 @@ html {
     100% {
         background-position: 0% 50%
     }
-}
-
-.shadowed {
-    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-    filter: url(#drop-shadow);
-    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-}
-
-.btn-banner {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0px;
-    font-family: Arial;
-    color: #07454c;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    border: solid #07454c 2px;
-    text-decoration: none;
-}
-
-.btn-banner:hover {
-    background: #c8fae4;
-    background-image: -webkit-linear-gradient(top, #c8fae4, #90ebc2);
-    background-image: -moz-linear-gradient(top, #c8fae4, #90ebc2);
-    background-image: -ms-linear-gradient(top, #c8fae4, #90ebc2);
-    background-image: -o-linear-gradient(top, #c8fae4, #90ebc2);
-    background-image: linear-gradient(to bottom, #c8fae4, #90ebc2);
-    text-decoration: none;
 }

@@ -65,7 +65,7 @@ jQuery(document).ready(function() {
                     current_active_step.removeClass('active').addClass('activated').next().addClass('active');
                     bar_progress(progress_line, 'right');
                     $(this).nextAll('.model-huawei').fadeIn();
-                    scroll_to_class($('form'), 20);
+                    scroll_to_class($('.sell-wizard'), 20);
                 });
             } else if (brand_value == 'iphone') {
                 parent_fieldset.fadeOut(200, function() {
